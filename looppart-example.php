@@ -8,7 +8,7 @@
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="style-example post px-2 px-sm-3 py-0 pb-md-3 linkarea">
+<article id="post-<?php the_ID(); ?>" class="style-example post px-2 py-3 px-sm-3 py-0 pb-md-3 linkarea">
 	<?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 	<span class="tmb-icon new">新着</span>
 	<?php endif; ?>
@@ -24,7 +24,7 @@
 	</figure>
 	<?php //get_template_part('cat_icon');//カテゴリーアイコン ?>
 	
-	<span class="title">
+	<span class="title mb-0">
 		<?php the_title(); ?>
 </span>
 	

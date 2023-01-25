@@ -211,7 +211,7 @@ wp_reset_query();
 		
       <div class="footer-contact mt-4 mb-2 container-fluid">
         <div class="row mb-5 mt-5">
-          <div class="footer-contact-inner1 col-md-4 mb-4"> <a href="/" class="w100 maxw-300 mx-auto"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-footer@2x.png" alt="<?php echo get_option('profile_corporate_name'); ?> ロゴ"></a> </div>
+          <div class="footer-contact-inner1 col-md-4 mb-4"> <a href="/" class="w100 maxw-300 mx-auto"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-footer@2x.webp" alt="<?php echo get_option('profile_corporate_name'); ?> ロゴ"></a> </div>
           <div class=" col-md-5  mb-4">
             <div class="contact-tel">
 				

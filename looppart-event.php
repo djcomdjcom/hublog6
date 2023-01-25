@@ -3,17 +3,17 @@
  * looppart-side_event.php
  *
  * @テーマ名	hublog
- * @更新日付	2012.04.05
+ * @更新日付	2022.23.05
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" class="post style-event row mx-auto p-0 <?php if (in_category('event-closed')) echo 'closed'; ?>">
+<article id="post-<?php the_ID(); ?>" class="post style-event row mx-auto  <?php if (in_category('event-closed')) echo 'closed'; ?>">
 	
 	
     <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
     <span class="tmb-icon new">新着</span>
     <?php endif; ?>
-    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-sm-5 p-0 mb-3 mb-sm-0 thumbnail"> <span class="attachment">
+    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="col-sm-5  mb-3 mb-sm-0 thumbnail"> <span class="attachment">
     <?php
     if ( function_exists( 'the_post_image' ) ) {
       if ( the_post_image( 'medium' ) === false ) {

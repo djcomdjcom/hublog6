@@ -453,7 +453,7 @@ line-height: 1.7em;
 
 .entry-content {
 padding: 1em 0 2em;
-line-height: 1.8em;
+line-height: 1.5em;
 }
 
 @media screen and (max-width:1199.98px) {
@@ -479,8 +479,29 @@ display: none;
 }
 
 }
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6{
+	line-height: 1.5em;
+}
 
-
+.indent-1{
+	display: inline-block;
+	text-indent: -1em;
+	margin-left: 1em;
+}
+.indent-2{
+	display: inline-block;
+	text-indent: -2em;
+	margin-left: 2em;
+}
+.indent-1 *,
+.indent-2 *{
+	text-indent: 0;
+}
 
 /*Header
 *************************************************************************/
@@ -1104,6 +1125,7 @@ margin-bottom: 1.5em;
 }
 .search-refinement > .title {
 text-align: center;
+
 border-bottom: 1px solid #eee;
 padding: 0.5em;
 font-size: 1em;
@@ -1698,6 +1720,7 @@ padding-top: 0;
 .entry-content a {
 text-decoration: underline;
 }
+/*
 .entry-content h2 {
 background: url(images/house.png) 5px center no-repeat;
 padding: 0.4em 0 0.4em 40px;
@@ -1741,6 +1764,7 @@ font-size: 1.1em;
 .entry-content h6 + div {
 margin-left: 3em;
 }
+*/
 .ttl.center {
 background: none;
 padding-left: 0;
@@ -2138,23 +2162,23 @@ margin-bottom: 2em;
 }
 .entry-content .txt-l, .txt-l {
 font-size: 1.1em;
-line-height: 1.6em;
+line-height: 1.5em;
 }
 .entry-content .txt-ll, .txt-ll {
 font-size: 1.3em;
-line-height: 1.6em;
+line-height: 1.5em;
 }
 .entry-content .txt-lll, .txt-lll {
 font-size: 1.5em;
-line-height: 1.6em;
+line-height: 1.5em;
 }
 .entry-content .txt-llll, .txt-llll {
 font-size: 1.9em;
-line-height: 1.6em;
+line-height: 1.5em;
 }
 .entry-content .txt-s, .txt-s {
 font-size: 0.85em;
-line-height: 1.6em;
+line-height: 1.5em;
 }
 .entry-content .txt-n, .txt-n {
 font-size: inherit;
@@ -4491,6 +4515,7 @@ color: #fff;
 width: 24px;
 right: 26px;
 }
+
 
 #footer .text-nowrap,
 #wrapper .text-nowrap{
