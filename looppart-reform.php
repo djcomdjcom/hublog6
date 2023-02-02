@@ -1,10 +1,11 @@
 <?php
 /**
- * looppart-thumb_title.php
+ * looppart-reform.php
+ * hublog6
+ * 20230202
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" class="post row justify-content-around style-reform">
+<article id="post-<?php the_ID(); ?>" class="post row justify-content-around style-reform linkarea">
   <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
   <span class="tmb-icon new">新着</span>
   <?php endif; ?>
@@ -13,7 +14,7 @@
   if ( function_exists( 'the_post_image' ) ) {
     if ( the_post_image( 'thumbnail' ) === false ) {
       ?>
-<span class="noimg"></span>
+  <span class="noimg"></span>
   <?php
   }
   }
@@ -33,6 +34,7 @@
     </div>
     <!--event-nmeta--> 
   </div>
-  <!--metabox-->
+  <!--metabox--> 
+  <span class="todetail"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s'), the_title_attribute('echo=0')); ?>"> 詳細を見る</a></span>
   <?php edit_post_link(__('Edit'), ''); ?>
 </article>

@@ -7,7 +7,7 @@
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" class="post style-event row mx-auto py-2  <?php if (in_category('event-closed')) echo 'closed'; ?>">
+<article id="post-<?php the_ID(); ?>" class="post style-event row linkarea py-2  <?php if (in_category('event-closed')) echo 'closed'; ?>">
   <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
   <span class="tmb-icon new">新着</span>
   <?php endif; ?>
@@ -45,11 +45,13 @@
     <!--event-nmeta-->
     
     <?php if (! in_category('event-closed')) : ?>
-    <span class="todetail text-center text-sm-left"> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">詳細・参加方法</a> </span>
+    <span class="btn pill arrow text-center text-sm-left mx-auto d-block px-0"><span>詳細・参加方法</span></span>
     <?php endif  ?>
   </div>
   <!--metabox-->
-  <?php get_template_part('icon_status');//ステイタスアイコン ?>
+	
+  <span class="todetail"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s'), the_title_attribute('echo=0')); ?>">詳細・参加方法</a></span>
+	<?php get_template_part('icon_status');//ステイタスアイコン ?>
   <?php edit_post_link(__('Edit'), ''); ?>
   <?php if (in_category('event-closed')) : ?>
   <a href="<?php the_permalink(); ?>" class="event-closed"> <span>このイベントは終了しました。<br />
