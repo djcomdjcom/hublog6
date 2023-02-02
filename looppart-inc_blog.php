@@ -13,7 +13,7 @@
   if ( function_exists( 'the_post_image' ) ) {
     if ( the_post_image( array(400,400) ) === false ) {
       ?>
-  <img src="<?php echo get_template_image('noimage');?>" width="120" height="120" alt="<?php the_title(); ?>" />
+<span class="noimg"></span>
   <?php
   }
   }

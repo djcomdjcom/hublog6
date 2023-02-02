@@ -39,7 +39,7 @@ $catnews_name = ( $catnews ) ? $catnews->name    : 'おすすめ商品';
             <span class="attachment-img w100">
             <?php if ( function_exists('the_post_image') ) {
             if ( the_post_image('medium') === false ){
-            ?><img src="<?php echo get_template_image('noimage');?>" alt="No Image" /><?php
+            ?><span class="noimg"></span><?php
             }
             } ?>
             </span><!--attachment-->

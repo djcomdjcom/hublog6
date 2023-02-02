@@ -13,7 +13,7 @@
 	<div class="thumbnail">
 		<?php	$thumbnail = get_the_post_thumbnail(get_the_ID(), 'thumbnail');
 						if ( empty($thumbnail) ) :
-							?><img class="attachment-thumbnail" src="<?php echo get_template_image('noimage');?>" width="150" height="150" alt="<?php the_title(); ?>" /><?php
+							?><span class="noimg"></span><?php
 						else :
 												echo $thumbnail;
 						endif; ?>

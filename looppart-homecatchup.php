@@ -23,7 +23,7 @@ $content_class[] = 'soldout';
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="medium"><?php
 						$thumbnail = get_the_post_thumbnail(get_the_ID(), array(180,180));
 						if ( empty($thumbnail) ) :
-								?><img src="<?php echo get_template_image('noimage');?>" width="120" height="120" alt="<?php the_title(); ?>" /><?php
+								?><span class="noimg"></span><?php
 						else :
 								echo $thumbnail;
 						endif; ?>

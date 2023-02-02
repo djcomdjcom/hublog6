@@ -17,7 +17,7 @@
 		<span class="attachment">
 			<?php if ( function_exists('the_post_image') ) {
 				if ( the_post_image('thumbnail') === false ){
-					?><img src="<?php echo get_template_image('noimage');?>" alt="No Image" /><?php
+					?><span class="noimg"></span><?php
 				}
 			} ?>
 		</span>

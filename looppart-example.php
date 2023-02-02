@@ -8,7 +8,7 @@
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="style-example post px-2 py-3 px-sm-3 py-0 pb-md-3 linkarea">
+<article id="post-<?php the_ID(); ?>" class="style-example post  p-2 p-sm-3 pb-md-3 linkarea">
 	<?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 	<span class="tmb-icon new">新着</span>
 	<?php endif; ?>
@@ -17,7 +17,7 @@
 		<span class="attachment">
 			<?php if ( function_exists('the_post_image') ) {
 				if ( the_post_image(array(600, 600)) === false ){
-					?><img src="<?php echo get_template_image('noimage');?>" alt="No Image" /><?php
+					?><span class="noimg"></span><?php
 				}
 			} ?>
 		</span>

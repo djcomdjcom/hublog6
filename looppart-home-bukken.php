@@ -18,7 +18,7 @@
 					<span class="attachment">
 					<?php	$thumbnail = get_the_post_thumbnail(get_the_ID(), 'large');
 					if ( empty($thumbnail) ) :
-					?><img src="<?php echo get_template_image('noimage');?>" alt="<?php the_title(); ?>" /><?php
+					?><span class="noimg"></span><?php
 					else :
 					echo $thumbnail;
 					endif; ?>

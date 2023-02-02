@@ -12,7 +12,7 @@
 
 					<?php	$thumbnail = get_the_post_thumbnail(get_the_ID(), 'thumbnail');
 					if ( empty($thumbnail) ) :
-						?><img src="<?php echo get_template_image('noimage');?>" width="120" height="120" alt="<?php the_title(); ?>" /><?php
+						?><span class="noimg"></span><?php
 					else :
 						echo $thumbnail;
 					endif; ?>

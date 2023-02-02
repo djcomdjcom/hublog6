@@ -51,11 +51,11 @@ $(function(){
 $('.posts .post.style-reform').addClass('col-12'); 
 });
 $(function(){
-$('.posts .post.style-event').addClass('my-5'); 
-$('.posts .post.style-event .thumbnail').addClass('pr-sm-3 pr-md-5'); 
+$('.posts .post.style-event').addClass('mb-5'); 
+$('.posts .post.style-event .thumbnail').addClass('pr-lg-5'); 
 });
 </script>
-    <div class="wrapper">
+    <div class="<?php if (is_post_type_archive ( array('example','voice','reform'))):?>wrapper <?php endif ;?>container">
       <div <?php body_class( 'posts row justify-content-start' ); ?>>
         <?php
         if ( !have_posts() ):

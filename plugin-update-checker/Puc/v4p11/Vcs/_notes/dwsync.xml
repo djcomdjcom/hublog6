@@ -8,4 +8,12 @@
 <file name="PluginUpdateChecker.php" server="150.60.158.228" local="133140925250311221" remote="133140930000000000" Dst="0" />
 <file name="Reference.php" server="150.60.158.228" local="133140925250311221" remote="133140930000000000" Dst="0" />
 <file name="ThemeUpdateChecker.php" server="150.60.158.228" local="133140925250321507" remote="133140930000000000" Dst="0" />
+<file name="Api.php" server="sv12340.xserver.jp" local="133140925250291583" remote="133146785400000000" Dst="0" />
+<file name="BaseChecker.php" server="sv12340.xserver.jp" local="133140925250291583" remote="133146785400000000" Dst="0" />
+<file name="BitBucketApi.php" server="sv12340.xserver.jp" local="133140925250301258" remote="133146785400000000" Dst="0" />
+<file name="GitHubApi.php" server="sv12340.xserver.jp" local="133140925250301258" remote="133146785400000000" Dst="0" />
+<file name="GitLabApi.php" server="sv12340.xserver.jp" local="133140925250301258" remote="133146785400000000" Dst="0" />
+<file name="PluginUpdateChecker.php" server="sv12340.xserver.jp" local="133140925250311221" remote="133146785400000000" Dst="0" />
+<file name="Reference.php" server="sv12340.xserver.jp" local="133140925250311221" remote="133146785400000000" Dst="0" />
+<file name="ThemeUpdateChecker.php" server="sv12340.xserver.jp" local="133140925250321507" remote="133146785400000000" Dst="0" />
 </dwsync>

@@ -12,17 +12,18 @@
 ありがとうございました。 </p>
 <?php else  :?>
 <?php if (post_custom('event-date')) :	?>
-<div id="addcontent-event" class="row">
-  <div class="col-md-6 eyecatch"> <span class="w100">
-    <?php if ( function_exists('the_post_image') ) :?>
-    <a rel="lightbox" href="<?php echo (get_the_post_thumbnail_url( get_the_ID(), 'large') );?>">
-    <?php ( the_post_image('large')  );?>
-    </a>
-    <?php else: ?>
-    <img src="<?php echo get_template_image('noimage');?>" alt="No Image" />
-    <?php endif;?>
+<div id="addcontent-event" class="row pb-4">
+  <div class="col-md-6 mb-0 eyecatch"> <span class="w100">
+	  
+<?php if (has_post_thumbnail()) : ?>
+  <?php the_post_thumbnail('large'); ?>
+<?php else: ?>
+  <span class="noimg"></span>
+<?php endif; ?>
+	  
+	  
     </span> </div>
-  <div class="event-meta col-md-6">
+  <div class="event-meta col-md-6 mb-0">
     <p class="title"><strong>イベント開催情報</strong></p>
 	  
 	<?php get_template_part('cat_icon');//カテゴリーアイコン ?>
