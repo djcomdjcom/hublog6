@@ -4,10 +4,8 @@ template name: ☆ABOUT子ページ 1カラム（htmlinclude）
  */
 get_header();
 ?>
-<div id="container" class="page widecolumn htmlpage">
-  <div id="content" role="main">
     <?php the_post(); ?>
-    <article class="entry-content clearfix hentry">
+    <article class="entry-content">
       <?php if ( post_custom('headerimg') ) : ?>
       <h1 class="entry-title title-image"> <span>
         <?php the_title(); ?>
@@ -59,10 +57,5 @@ get_header();
     </footer>
     <!-- .entry-utility --> 
     
-  </div>
-  <!-- #content --> 
-  
-</div>
-<!-- #container -->
 
 <?php get_footer(); ?>

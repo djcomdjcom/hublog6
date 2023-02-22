@@ -43,7 +43,7 @@ $(function(){
 });  
 </script>
 <?php the_post(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
   <header class="wrapper">
     <?php if (post_custom('voice-catch')) : ?>
     <h1 class="entry-title"><span><?php echo (post_custom('voice-catch')) ; ?></span></h1>
@@ -53,7 +53,7 @@ $(function(){
       </span></h1>
     <?php endif ;?>
   </header>
-  <div class="entry-content clearfix">
+  <article class="entry-content">
     <?php get_template_part('addcontent_before', apply_filters('hublog_addcontent_before','') ); ?>
     <?php get_template_part('addcontent', $addcontent); ?>
     <?php if (post_custom('voice-catch')) : ?>
@@ -84,7 +84,7 @@ $(function(){
     <?php wp_reset_query(); ?>
     <?php get_template_part('addcontent_after',  apply_filters('hublog_addcontent_after','')  ); ?>
     <?php get_template_part('addcontent_after', $addcontent); ?>
-  </div>
+  </article>
   <!-- .entry-content -->
   
   <?php get_template_part('hublog-inquiry',''); //問い合わせフック ?>
@@ -124,4 +124,5 @@ $(function(){
     
   </footer>
 </article>
-<!-- #post-## --> 
+<!--.hentry-->
+

@@ -9,8 +9,15 @@ html {
 }
 main#main{
 	min-height: 60vh;
+	padding: 0 15px;
+	overflow: hidden;
 }
 
+@media screen and (min-width:1280px) {
+main#main{
+	padding: 0 0;
+}
+}
 .flexbox {
   width: 100%;
   max-width: 1200px;
@@ -1327,6 +1334,107 @@ dl.flow dd:last-child:after {
 .txt-n {
   font-size: inherit;
 }
+
+.lh-10{
+	line-height: 1.0em;
+}
+.lh-11{
+	line-height: 1.1em;
+}
+.lh-12{
+	line-height: 1.5em;
+}
+.lh-13{
+	line-height: 1.3em;
+}
+.lh-14{
+	line-height: 1.4em;
+}
+.lh-15{
+	line-height: 1.5em;
+}
+.lh-16{
+	line-height: 1.6em;
+}
+.lh-17{
+	line-height: 1.7em;
+}
+.lh-18{
+	line-height: 1.8em;
+}
+.lh-19{
+	line-height: 1.9em;
+}
+.lh-20{
+	line-height: 2.0em;
+}
+.lh-22{
+	line-height: 2.1em;
+}
+.lh-22{
+	line-height: 2.2em;
+}
+.lh-23{
+	line-height: 2.3em;
+}
+.lh-24{
+	line-height: 2.4em;
+}
+.lh-25{
+	line-height: 2.5em;
+}
+.lh-26{
+	line-height: 2.6em;
+}
+.lh-27{
+	line-height: 2.7em;
+}
+.lh-28{
+	line-height: 2.8em;
+}
+.lh-29{
+	line-height: 2.9em;
+}
+.lh-30{
+	line-height: 3.0em;
+}
+.lh-31{
+	line-height: 3.1em;
+}
+.lh-32{
+	line-height: 3.2em;
+}
+.lh-33{
+	line-height: 3.3em;
+}
+.lh-34{
+	line-height: 3.4em;
+}
+.lh-35{
+	line-height: 3.5em;
+}
+.lh-36{
+	line-height: 3.6em;
+}
+.lh-37{
+	line-height: 3.7em;
+}
+.lh-38{
+	line-height: 3.8em;
+}
+.lh-39{
+	line-height: 3.9em;
+}
+.lh-40{
+	line-height: 4.0em;
+}
+
+
+
+
+
+
+
 .entry-content small {
   line-height: 1.3em;
 }
@@ -2030,6 +2138,163 @@ dl.flow dd:last-child:after {
   font-size: 2.1em;
 }
 }
+
+/*wpcf7*/
+#popupform7 > .post-info {
+display: none;
+}
+.nyroModalDom {
+font-size: 1.2em;
+}
+.nyroModalDom .post-thumbnail {
+width: 90px;
+display: inline-block;
+vertical-align: top;
+}
+.nyroModalDom h3 {
+display: inline-block;
+vertical-align: top;
+}
+.nyroModalDom .clearfix {}
+.pWindow .contentsBox .contentsBody {
+padding: 10px 10px 5px;
+}
+.nyroModalDom .clearfix .input-area, .nyroModalDom h3, .pwContainer .clearfix .input-area {
+/*    width: 360px;
+*/
+}
+
+#form.container{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 980px !important;
+}
+
+.hublog-inquiry .beforeform{
+	text-align: center;
+	margin-bottom: 2em;
+}
+.hublog-inquiry .beforeform .ttl{
+	border: 1px solid #ddd;
+	display: block;
+	padding: 1rem;
+	margin-bottom: 2rem;;
+}
+
+.wpcf7{
+	font-size: 1rem;
+}
+input.wpcf7-text,
+textarea.wpcf7-textarea {
+  max-width: 100%;
+  width: auto;
+}
+.wpcf7-form {
+border-radius: 0.5em;
+background: #f9f9f9;
+padding: 2em;
+box-sizing: border-box;
+}
+.wpcf7-form > p,
+.wpcf7-form > .privacy{
+border: 1px solid #ddd;
+background: #f4f4f4;
+padding: 1em;
+display: block;
+margin-bottom: 0.5em;
+}
+.wpcf7-form-control-wrap .wpcf7-checkbox{
+padding: 0.5em;
+border: 1px solid #ddd;
+background: #f9f9f9;
+display: block;
+}
+
+
+.wpcf7-form > p > b {
+	display: block;
+	padding-bottom: 0.2em;
+}
+.wpcf7-form > p > b + br{
+	display: none;
+}
+
+.wpcf7-form > p > b.required:after {
+content: "必須";
+color: #900;
+display: inline-block;
+font-size: 0.85em;
+margin: 0 0.5em;
+}
+.wpcf7-form .submit_area{
+	text-align: center;
+}
+.wpcf7-form .submit_area .wpcf7-list-item{
+	display: inline-block;
+}
+.wpcf7-form .submit_area .wpcf7-list-item input{
+	font-size: 2em;
+}
+
+.wpcf7 input.wpcf7-text
+{
+	font-size: 1.5em;
+}
+.wpcf7-checkbox,
+.wpcf7-textarea,
+.wpcf7-radio,
+.wpcf7-date
+{
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+}
+.wpcf7-list-item{
+	display: block;
+}
+.wpcf7 .caution{
+color: #900;
+}
+
+.wpcf7-acceptance{
+	font-size: 1.2em;
+}
+.wpcf7-form iframe{
+	width: 100%;
+	border: 0;
+}
+
+.wpcf7-validates-as-date{
+	min-width: 8em;
+	min-height: 1.7em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+@media screen and (max-width:575.98px) {
+.wpcf7-form,
+.wpcf7-form > p{
+padding: 0.7em;
+}
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 300px;
+  background: #1ca5aa;
+  border-radius: 0.3em;
+  border: none;
+  color: #fff;
+  padding: 0.7em 0;
+  font-weight: bold;
+  font-size: 120%;
+}
+input[type="submit"]:hover {
+  background: #6dd;
+  transition: all .5s ease;
+}
+
 
 /*404*/
 .error404 .entry-content {

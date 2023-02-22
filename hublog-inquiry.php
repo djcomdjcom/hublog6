@@ -40,7 +40,7 @@ echo apply_filters('the_content', get_post_meta($post->ID, 'unique-form-ttl', tr
 
 
 <?php if ( is_page(array('inquiry')) ) : //お問合せページ ?>
-<div id="form" class="hublog-inquiry page clearfix wide anchor">
+<div id="form" class="hublog-inquiry wrapper  wide anchor">
 	<span class="title">お問合せ</span>
 	<div class="inbox">
 		<div class="hublog-inquiry-tel clearfix">

@@ -1,5 +1,8 @@
 <?php
 /**
+ * single-example.php
+ * hublog6
+ * 20230202
  */
 
 get_header();
@@ -11,16 +14,15 @@ $(function(){
 });  
 </script>
 
-<div id="container" class="single clearfix <?php if (!in_category(array('blog','genba','staff','shachou')) ):?> widecolumn<?php endif ;?>">
-  <div id="content" role="main">
     <?php the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
+
       <header class="wrapper">
         <h1 class="entry-title"><span>
           <?php the_title(); ?>
           </span></h1>
       </header>
-      <div class="entry-content clearfix">
+      <div class="entry-content">
         <?php //get_template_part('addcontent_before', apply_filters('hublog_addcontent_before','') ); ?>
         <?php get_template_part('addcontent', 'example'); ?>
         <?php the_content(); ?>
@@ -85,11 +87,6 @@ $(function(){
     </article>
     <!-- #post-## --> 
     
-  </div>
-  <!-- #content --> 
-</div>
-<!-- #container -->
-
 <?php
 /**
  */

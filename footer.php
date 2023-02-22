@@ -282,13 +282,28 @@ $(function () {
 </script>
 	
 <?php if ( is_user_logged_in() ) :?>
+<style>
+	.content{
+		display: none;
+	}
+	.toggle:checked + .title + .content {
+		display: block;
+	}
+</style>
 
-<div style="left: 0;bottom: 0;z-index: 9999;background:  rgba(255,255,255,0.79)" class="position-fixed px-2">
+
+<div onClick="accordion" style="left: 0;bottom: 0;z-index: 9999;background:  rgba(255,255,255,0.79)" class="position-fixed px-2">
+<div class="option">
+<input type="checkbox" id="hint001" class="toggle">
+<label class="title" for="hint001">画角ヒント</label>
+<div class="content">
 <p class="my-0"><span class="d-inline-block d-sm-none">●</span>sm未満：-575.98px</p>
 <p class="my-0"><span class="d-sm-inline-block d-none d-md-none">●</span>sm：576px-767.98px</p>
 <p class="my-0"><span class="d-md-inline-block d-none d-lg-none">●</span>md：768px-991.98px</p>
 <p class="my-0"><span class="d-lg-inline-block d-none d-xl-none">●</span>lg：992px-1199.98px</p>
 <p class="my-0"><span class="d-xl-inline-block d-none d-xxl-none">●</span>xl：1200px-</p>
+</div>
+</div>
 </div>
 <?php endif;?>
 
