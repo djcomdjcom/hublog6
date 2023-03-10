@@ -23,7 +23,7 @@ $(function(){
       </span></h1>
     <?php endif ;?>
   </header>
-  <article class="entry-content">
+  <article class="entry-content wrapper">
     <?php the_content(); ?>
     <?php if ( current_user_can( 'administrator' ) ) :?>
     <p class="edit_theme"><a target="_blank" href="/wp-admin/theme-editor.php?file=html%2F<?php echo $slug_name = $post->post_name; ?>.php&theme=<?php echo get_stylesheet('name'); ?>" title="/wp-admin/theme-editor.php?file=html%2F<?php echo $slug_name = $post->post_name; ?>.php&theme=<?php echo get_stylesheet('name'); ?>"> このincludeテーマを編集 </a></p>

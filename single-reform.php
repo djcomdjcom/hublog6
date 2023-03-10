@@ -20,7 +20,7 @@ $(function(){
       <?php the_title(); ?>
       </span></h1>
   </header>
-  <div class="entry-content clearfix">
+  <div class="entry-content wrapper">
     <?php get_template_part('addcontent_before', apply_filters('hublog_addcontent_before','') ); ?>
     <?php get_template_part('addcontent', 'beforeafter'); ?>
     <?php the_content(); ?>

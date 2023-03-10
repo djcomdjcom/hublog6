@@ -16,7 +16,7 @@ $(function(){
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
 
 
-<article class="entry-content">
+<article class="entry-content wrapper">
   <?php the_content(); ?>
 	
   <?php //インクルードセクション

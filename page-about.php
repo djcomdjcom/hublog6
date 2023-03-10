@@ -10,7 +10,7 @@
 get_header();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
-  <header class="entry-header">
+  <header class="entry-header wrapper">
     <?php
     if ( has_post_thumbnail() ):
       $args = array(
@@ -27,7 +27,7 @@ get_header();
     <?php endif; ?>
   </header>
   <?php get_template_part('addcontent','about'); ?>
-  <div class="entry-content">
+  <div class="entry-content wrapper">
     <?php if (have_posts()) : the_post(); ?>
     <?php the_content(); ?>
     <?php endif; ?>

@@ -20,7 +20,7 @@ get_header();
       </span></h1>
     <?php endif ;?>
   </header>
-  <div class="entry-content">
+  <div class="entry-content wrapper">
   <?php the_content(); ?>
 	
 	

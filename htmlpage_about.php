@@ -5,7 +5,7 @@ template name: ☆ABOUT子ページ 1カラム（htmlinclude）
 get_header();
 ?>
     <?php the_post(); ?>
-    <article class="entry-content">
+    <article class="entry-content wrapper">
       <?php if ( post_custom('headerimg') ) : ?>
       <h1 class="entry-title title-image"> <span>
         <?php the_title(); ?>

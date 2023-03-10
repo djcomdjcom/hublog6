@@ -78,8 +78,8 @@ if ( is_home() || is_front_page() ){
 
 <?php get_template_part( 'site_header' ); ?>
 	
-<div id="breadcrumb" class="breadcrumbs" vocab="https://schema.org/" typeof="BreadcrumbList">
-  <div class="inbox px-2">
+<div id="breadcrumb" class="breadcrumbs wrapper" vocab="https://schema.org/" typeof="BreadcrumbList">
+  <div class="inbox">
     <?php
     if ( function_exists( 'bcn_display' ) ) {
       bcn_display();

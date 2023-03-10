@@ -48,15 +48,20 @@ $(function(){
 $('.posts .post.style-voice').addClass('col-6 col-lg-4'); 
 });
 $(function(){
-$('.posts .post.style-event').addClass('mb-5'); 
-$('.posts .post.style-event .thumbnail').addClass('pr-lg-5'); 
+$('.posts .post.style-event').addClass('mx-auto'); 
 });
+$(function(){
+$('.posts .post.style-event').addClass('mb-5'); 
+$('.posts .post.style-event .thumbnail').addClass('pr-md-5'); 
+});
+</script>
+
 </script>
 <?php if (is_post_type_archive ( array('example','voice') ) || is_tax(array('ex_cat','voice_cat'))):?>
 <div class="wrapper px-3 px-xl-0">
 <div <?php body_class( 'posts row justify-content-start' ); ?>>
 <?php else :?>
-<div class="container">
+<div class="wrapper maxw-1000 mx-auto pl-3 px-3">
   <div <?php body_class( 'posts' ); ?>>
     <?php endif ;?>
     <?php

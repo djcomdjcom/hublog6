@@ -24,7 +24,7 @@ $(function(){
       </span></h1>
     <?php endif ;?>
   </header>
-  <article class="entry-content">
+  <article class="entry-content wrapper">
   <?php the_content(); ?>
   <?php //インクルードセクション
   $the_page = get_page( get_the_ID() );

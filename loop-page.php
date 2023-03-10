@@ -7,12 +7,12 @@
 ?>
 <?php the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
-  <header class="entry-header">
+  <header class="entry-header wrapper">
     <h1 class="entry-title"><span>
       <?php the_title(); ?>
       </span></h1>
   </header>
-  <div class="entry-content">
+  <div class="entry-content wrapper">
     <?php the_content(); ?>
     <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
   </div>

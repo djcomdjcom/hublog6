@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="Info.php" server="150.60.158.228" local="133140925250241386" remote="133140930000000000" Dst="0" />
-<file name="Package.php" server="150.60.158.228" local="133140925250241386" remote="133140930000000000" Dst="0" />
-<file name="Ui.php" server="150.60.158.228" local="133140925250241386" remote="133140930000000000" Dst="0" />
-<file name="Update.php" server="150.60.158.228" local="133140925250251713" remote="133140930000000000" Dst="0" />
-<file name="UpdateChecker.php" server="150.60.158.228" local="133140925250251713" remote="133140930000000000" Dst="0" />
-<file name="Info.php" server="sv12340.xserver.jp" local="133140925250241386" remote="133146785400000000" Dst="0" />
-<file name="Package.php" server="sv12340.xserver.jp" local="133140925250241386" remote="133146785400000000" Dst="0" />
-<file name="Ui.php" server="sv12340.xserver.jp" local="133140925250241386" remote="133146785400000000" Dst="0" />
-<file name="Update.php" server="sv12340.xserver.jp" local="133140925250251713" remote="133146785400000000" Dst="0" />
-<file name="UpdateChecker.php" server="sv12340.xserver.jp" local="133140925250251713" remote="133146785400000000" Dst="0" />
+<file name="Info.php" server="sv12340.xserver.jp" local="133229378997824051" remote="133228863000000000" Dst="0" />
+<file name="Package.php" server="sv12340.xserver.jp" local="133229378998106875" remote="133228863000000000" Dst="0" />
+<file name="Ui.php" server="sv12340.xserver.jp" local="133229378998398748" remote="133228863000000000" Dst="0" />
+<file name="Update.php" server="sv12340.xserver.jp" local="133229378998567345" remote="133228863000000000" Dst="0" />
+<file name="UpdateChecker.php" server="sv12340.xserver.jp" local="133229378998830608" remote="133228863000000000" Dst="0" />
+<file name="Info.php" server="150.60.158.228" local="133229414017979143" remote="133229382000000000" Dst="0" />
+<file name="Package.php" server="150.60.158.228" local="133229414018258748" remote="133229382000000000" Dst="0" />
+<file name="Ui.php" server="150.60.158.228" local="133229414018539171" remote="133229382000000000" Dst="0" />
+<file name="Update.php" server="150.60.158.228" local="133229414018678767" remote="133229382000000000" Dst="0" />
+<file name="UpdateChecker.php" server="150.60.158.228" local="133229414018933884" remote="133229382000000000" Dst="0" />
 </dwsync>

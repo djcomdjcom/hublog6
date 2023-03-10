@@ -7,7 +7,7 @@ require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
  'http://demobuilder.hublog.info/wp-content/themes/hublog6/hublog_update.json',
  __FILE__,
- 'hublog5' //テーマ名
+ 'hublog6' //テーマ名
 );
 
 
@@ -327,7 +327,7 @@ $parent_theme = wp_get_theme(get_template());//親テーマ
 	}
 
 } // end Class Theme_Settings
-$hublog3 = new Theme_Settings();
+$hublog6 = new Theme_Settings();
 
 /* テーマ組み込みプラグインの読み込み */
 $inc_dirs = array();
@@ -397,7 +397,7 @@ add_action('add_meta_boxes', 'add_bzb_checklists');
 function add_bzb_checklists() {
   add_meta_box('bzb_checklists', 'オファー作成のチェックポイント', 'bzb_checklists', 'post', 'side', 'low');
 }
-
+/*
 function bzb_checklists() {
   global $post;
   $checklists = array();
@@ -426,6 +426,7 @@ function bzb_checklists() {
 
 <?php
 }
+*/
 //ADMIN CSS追加
 function admin_files() {
     echo '
@@ -484,4 +485,18 @@ add_action('wp_before_admin_bar_render', 'analytics_in_admin_bar');
 add_theme_support( 'post-thumbnails' );	
 //本体ギャラリーCSS停止
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+//yarppのCSSを読み込まない
+
+add_action('wp_print_styles','lm_dequeue_header_styles');
+function lm_dequeue_header_styles()
+{
+  wp_dequeue_style('yarppWidgetCss');
+}
+
+add_action('get_footer','lm_dequeue_footer_styles');
+function lm_dequeue_footer_styles()
+{
+  wp_dequeue_style('yarppRelatedCss');
+}
 ?>

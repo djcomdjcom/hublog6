@@ -44,7 +44,7 @@ $(function(){
 </script>
 <?php the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
-  <header class="wrapper">
+  <header class="wrapper mx-fit">
     <?php if (post_custom('voice-catch')) : ?>
     <h1 class="entry-title"><span><?php echo (post_custom('voice-catch')) ; ?></span></h1>
     <?php else :?>
@@ -53,7 +53,7 @@ $(function(){
       </span></h1>
     <?php endif ;?>
   </header>
-  <article class="entry-content">
+  <article class="entry-content wrapper">
     <?php get_template_part('addcontent_before', apply_filters('hublog_addcontent_before','') ); ?>
     <?php get_template_part('addcontent', $addcontent); ?>
     <?php if (post_custom('voice-catch')) : ?>

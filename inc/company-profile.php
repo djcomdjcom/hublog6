@@ -16,14 +16,17 @@ Version: 1.1.2
 
 */
 
+// Exit If Accessed Directly
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_action( 'admin_menu', 'hublog_company_profile' );
 
 $fieldname_prefix = 'profile_';
 
 function hublog_company_profile() {
-
-  add_theme_page( 'hublog_company_profile', '会社概要', 'edit_themes', basename( __FILE__ ), 'hublog_company_profile_page' );
+//   add_menu_page('共通設定画面', '共通設定', 'manage_options', 'custom_menu_page', 'add_custom_menu_page', 'dashicons-admin-generic', 4);
+//   add_theme_page( 'hublog_company_profile', '会社概要', 'edit_themes', basename( __FILE__ ), 'hublog_company_profile_page' );
+  add_theme_page( 'hublog_company_profile', '会社概要', 'manage_options', 'custom_menu_page',  'hublog_company_profile_page' );
 
 }
 

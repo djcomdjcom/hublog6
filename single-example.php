@@ -17,15 +17,17 @@ $(function(){
     <?php the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
 
-      <header class="wrapper">
+  <header class="wrapper mx-fit">
         <h1 class="entry-title"><span>
           <?php the_title(); ?>
           </span></h1>
       </header>
-      <div class="entry-content">
+      <div class="entry-content wrapper">
         <?php //get_template_part('addcontent_before', apply_filters('hublog_addcontent_before','') ); ?>
         <?php get_template_part('addcontent', 'example'); ?>
         <?php the_content(); ?>
+		  
+		  
         <?php wp_reset_query(); ?>
         <?php get_template_part('addcontent_after',  apply_filters('hublog_addcontent_after','')  ); ?>
         <?php get_template_part('addcontent_after', $addcontent); ?>
@@ -72,7 +74,7 @@ $(function(){
             ?>
           </div>
           <!-- .entry-meta -->
-          
+          <?php related_posts(); ?>
           <div class="entry-meta updated author"> <span class="date updated">
             <?php the_time('Y/n/j') ?>
             </span> <span class="author vcard">投稿者：<span class="fn">
