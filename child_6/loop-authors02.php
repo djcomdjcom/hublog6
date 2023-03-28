@@ -29,17 +29,15 @@ $userphotoid = $user_info->ID;
 http://wpdocs.sourceforge.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/get_userdata
 */
 ?>
-<div class="user_info clearfix profil">
+<div class="user_info clearfix profil pb-4">
   <div class="inbox">
-    <figure class="photobox"><?php echo get_wp_user_avatar( $userphotoid, 'thumbnail' ); ?></figure>
-    <div class="staff-meta pl-3 pl-sm-0 pb-sm-3">
+    <figure class="photobox mb-2"><a href="/about/staff/<?php echo $user_info->user_login; ?>"><?php echo get_wp_user_avatar( $userphotoid, 'thumbnail' ); ?></a></figure>
+    <div class="staff-meta">
       <div class="staff-post"><?php echo $user_info->post; ?></div>
       <div class="staff-division"><?php echo $user_info->division; ?></div>
       <div class="staff-name"><?php echo $user_info->last_name; ?>&nbsp;<?php echo $user_info->first_name; ?></div>
       <div class="staff-kana"><?php echo $user_info->kana; ?></div>
     </div>
-    <label>
-    <input type="checkbox" name="checkbox">
     <div class=" staffpopup">
       <div class="inbox row"> <span class="w100 col-3"><?php echo get_wp_user_avatar( $userphotoid, 'thumbnail' ); ?></span>
         <div class="userinfo_detail col-9">

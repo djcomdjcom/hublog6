@@ -12,10 +12,13 @@ main#main{
 	padding: 0 15px;
 	overflow: hidden;
 }
+
+@media screen and (max-width: 575.98px) {
 .mx-fit,
 .mx-fit.wrapper{
-	margin-left: -15px;
-	margin-right: -15px;
+	margin-left: -1rem !important;
+	margin-right: -1rem !important;
+}
 }
 
 @media screen and (min-width:1280px) {
@@ -289,7 +292,7 @@ blockquote cite {
 	box-shadow:10px 0 5px rgba( 0,0,0,0.1);
 }
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .indent-1 {
   display: inline-block;
@@ -690,7 +693,7 @@ ul.sub-menu {
   margin: auto;
   color: #333;
   padding: 0.5em 1em 0.5em 3em;
-  line-height: 1.8em;
+  line-height: 1.8;
   border-radius: 2px;
   text-decoration: none;
   border: 1px solid #333;
@@ -699,18 +702,18 @@ ul.sub-menu {
   transition: .2s;
   white-space: nowrap;
 }
-.posts .post .todetail a[rel="bookmark"]:after, .posts .post .todetail[rel="bookmark"]:after {
+.posts .post .todetail a:after, .posts .post .todetail[rel="bookmark"]:after {
   font-family: 'Material Icons';
   content: '\e5e1';
   color: #333;
   padding-left: 1em;
   margin-left: 1em;
   display: inline-block;
-  line-height: 1.2em;
+  line-height: 1.2;
   opacity: 0.75;
   transition: .2s;
 }
-.toindex a:hover, .posts .post .todetail a[rel="bookmark"]:hover, .posts .post .todetail[rel="bookmark"]:hover {
+.toindex a:hover, .posts .post .todetail a:hover, .posts .post .todetail[rel="bookmark"]:hover {
   text-decoration: none;
   opacity: 0.75;
   transition: .2s;
@@ -734,6 +737,13 @@ ul.sub-menu {
   white-space: nowrap;
   border: 0 !important;
 }
+
+.linkarea .todetail a:after,
+ .posts .post.linkarea .todetail a:after {
+	content: none;
+}
+
+
 .linkarea a:hover {
   background: rgba(0, 0, 0, 0.10);
 }
@@ -783,7 +793,7 @@ div.btn, p.btn {
   font-size: 1em;
   padding-left: 1em;
   display: inline-block;
-  line-height: 1.2em;
+  line-height: 1.2;
   opacity: 1;
 }
 a.arrow:before {
@@ -793,7 +803,7 @@ a.arrow:before {
   padding-left: 1em;
   margin-left: 1em;
   display: inline-block;
-  line-height: 1.2em;
+  line-height: 1.2;
   opacity: 1;
 }
 a.arrow {
@@ -919,7 +929,7 @@ img {
   background: none;
   padding: 0;
   border: none;
-  line-height: 1em;
+  line-height: 1;
 }
 .entry-utility {
   padding: 1rem;
@@ -946,7 +956,7 @@ img {
   clear: both;
   float: none;
   padding: 2em 1em;
-  line-height: 1.8em;
+  line-height: 1.8;
   color: #888;
 }
 .pagebar .break {
@@ -1072,7 +1082,7 @@ img {
   background: none;
   padding-left: 0;
   border: none;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .ttl .ttlicon {
   display: inline-block;
@@ -1372,120 +1382,120 @@ dl.flow dd:last-child:after {
 }
 .txt-l {
   font-size: 1.1em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .txt-ll {
   font-size: 1.3em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .txt-lll {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .txt-llll {
   font-size: 1.9em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .txt-s {
   font-size: 0.85em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .txt-n {
   font-size: inherit;
 }
 
 .lh-10{
-	line-height: 1.0em;
+	line-height: 1.0;
 }
 .lh-11{
-	line-height: 1.1em;
+	line-height: 1.1;
 }
 .lh-12{
-	line-height: 1.5em;
+	line-height: 1.5;
 }
 .lh-13{
-	line-height: 1.3em;
+	line-height: 1.3;
 }
 .lh-14{
-	line-height: 1.4em;
+	line-height: 1.4;
 }
 .lh-15{
-	line-height: 1.5em;
+	line-height: 1.5;
 }
 .lh-16{
-	line-height: 1.6em;
+	line-height: 1.6;
 }
 .lh-17{
-	line-height: 1.7em;
+	line-height: 1.7;
 }
 .lh-18{
-	line-height: 1.8em;
+	line-height: 1.8;
 }
 .lh-19{
-	line-height: 1.9em;
+	line-height: 1.9;
 }
 .lh-20{
-	line-height: 2.0em;
+	line-height: 2.0;
 }
 .lh-22{
-	line-height: 2.1em;
+	line-height: 2.1;
 }
 .lh-22{
-	line-height: 2.2em;
+	line-height: 2.2;
 }
 .lh-23{
-	line-height: 2.3em;
+	line-height: 2.3;
 }
 .lh-24{
-	line-height: 2.4em;
+	line-height: 2.4;
 }
 .lh-25{
-	line-height: 2.5em;
+	line-height: 2.5;
 }
 .lh-26{
-	line-height: 2.6em;
+	line-height: 2.6;
 }
 .lh-27{
-	line-height: 2.7em;
+	line-height: 2.7;
 }
 .lh-28{
-	line-height: 2.8em;
+	line-height: 2.8;
 }
 .lh-29{
-	line-height: 2.9em;
+	line-height: 2.9;
 }
 .lh-30{
-	line-height: 3.0em;
+	line-height: 3.0;
 }
 .lh-31{
-	line-height: 3.1em;
+	line-height: 3.1;
 }
 .lh-32{
-	line-height: 3.2em;
+	line-height: 3.2;
 }
 .lh-33{
-	line-height: 3.3em;
+	line-height: 3.3;
 }
 .lh-34{
-	line-height: 3.4em;
+	line-height: 3.4;
 }
 .lh-35{
-	line-height: 3.5em;
+	line-height: 3.5;
 }
 .lh-36{
-	line-height: 3.6em;
+	line-height: 3.6;
 }
 .lh-37{
-	line-height: 3.7em;
+	line-height: 3.7;
 }
 .lh-38{
-	line-height: 3.8em;
+	line-height: 3.8;
 }
 .lh-39{
-	line-height: 3.9em;
+	line-height: 3.9;
 }
 .lh-40{
-	line-height: 4.0em;
+	line-height: 4.0;
 }
 
 
@@ -1495,7 +1505,7 @@ dl.flow dd:last-child:after {
 
 
 .entry-content small {
-  line-height: 1.3em;
+  line-height: 1.3;
 }
 /*RESPONSIVE*/
 .w100 {
@@ -1717,7 +1727,7 @@ margin: 0;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   font-size: 0.85em;
-  line-height: 1.5em;
+  line-height: 1.5;
   box-sizing: border-box;
   padding: 0.5em;
   bottom: -100%;
@@ -1882,7 +1892,7 @@ margin: 0;
   display: block;
 }
 #galleryslider .gallery-caption {
-  line-height: 1.4em;
+  line-height: 1.4;
 }
 #galleryslider .gallery.gallery-size-thumbnail dd.gallery-caption {
   display: none;
@@ -2585,7 +2595,7 @@ padding: 0.7em;
   padding: 0.2em 0.5em 0.2em;
   background: rgba(0, 0, 0, 0.70);
   color: #fff;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-size: 13px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.70);
   border-radius: 4px;
@@ -2603,7 +2613,7 @@ padding: 0.7em;
   padding: 0.2em 0.5em 0.2em;
   background: rgba(0, 0, 0, 0.70);
   color: #fff;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-size: 13px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.70);
   border-radius: 4px;
@@ -2652,7 +2662,7 @@ padding: 0.7em;
   display: block;
 }
 .posts .post.post.style-event a.event-closed {
-  background: rgba(0, 0, 0, 0.60);
+  background: rgba(0, 0, 0, 0.25);
   display: inline-block;
   position: absolute;
   left: 0;
@@ -2756,11 +2766,11 @@ padding: 0.7em;
   position: relative;
   display: inline-block;
   height: 2em;
-  line-height: 2em;
+  line-height: 2;
   padding: 0 1em;
   border-radius: 0 3px 3px 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
@@ -3099,10 +3109,18 @@ padding: 0 3vw;
     margin: 0px auto;
   }
 }
-.snslink svg{
+#global-navi .snslink ul.flexbox > li{
+	width: calc( 100% / 7);
+}
+#global-navi .snslink{
+	max-width: 640px;
+}
+
+#global-navi .snslink svg{
 	fill:#fff; 
 	max-width: 2.5rem;
-} 
+}
+
 footer-widget-area:after {
   height: 0;
   visibility: hidden;
@@ -3226,7 +3244,7 @@ option[value="Hublog"], option[value="Twenty Eleven"], option[value="Twenty Ten"
 }
 br.sponly {}
 .txt36, .txt24, .txt18, .txt14, .txt12, .txt10, .txt8 {
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 @media screen and (min-width:768px) {
   .txt36 {

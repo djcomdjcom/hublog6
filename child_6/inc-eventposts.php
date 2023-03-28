@@ -73,7 +73,7 @@
 
 											<?php if ( function_exists('the_post_image') ) {
 												if ( the_post_image('large') === false ){
-													?><span class="noimg"></span><?php
+													?><img src="<?php echo get_template_image('noimage');?>" alt="No Image" /><?php
 												}
 											} ?>
 
@@ -83,7 +83,7 @@
 											<span class=" w100" title="<?php printf(__('Permanent Link to %s'),the_title_attribute('echo=0')); ?>">
 											<?php if ( function_exists('the_post_image') ) {
 												if ( the_post_image('large') === false ){
-													?><span class="noimg"></span><?php
+													?><img src="<?php echo get_template_image('noimage');?>" alt="No Image" /><?php
 												}
 											} ?>
 

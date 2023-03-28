@@ -1,8 +1,8 @@
 <!--▼▼▼施工事例▼▼▼-->
 <section id="home-example" class="pt-1 pb-5">
-  <div class="wrapper container home-posts">
+  <div class="wrapper container home-posts px-0">
     <header class="content_header mt-5 mb-3">
-      <h2 class="ttl center">施工事例</h2>
+      <h2 class="ttl mincho center">施工事例</h2>
     </header>
     <script>
 $(function(){
@@ -27,7 +27,7 @@ $('.posts .post.style-example').addClass('col-6 col-lg-4 ');
       <?php endwhile; ?>
     </div>
     <?php endif; wp_reset_postdata(); ?>
-    <div class="aboveright arrow toindex"> <a href="/example/" title="施工事例一覧ページヘのリンク">一覧を見る</a> </div>
+    <div class="arrow btn"> <a href="/example/" title="施工事例一覧ページヘのリンク">一覧を見る</a> </div>
   </div>
 </section>
 <!--　home-example　▲▲▲施工事例▲▲▲--> 

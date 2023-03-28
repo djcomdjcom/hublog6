@@ -79,7 +79,7 @@ jQuery(function($){
       if ( function_exists( 'the_post_image' ) ) {
         if ( the_post_image( array( 300, 100 ) ) === false ) {
           ?>
-      <span class="noimg"></span>
+      <img src="<?php echo get_template_image('noimage');?>" alt="No Image" />
       <?php
       }
       }
@@ -91,7 +91,7 @@ jQuery(function($){
       if ( function_exists( 'the_post_image' ) ) {
         if ( the_post_image( array( 300, 100 ) ) === false ) {
           ?>
-      <span class="noimg"></span>
+      <img src="<?php echo get_template_image('noimage');?>" alt="No Image" />
       <?php
       }
       }

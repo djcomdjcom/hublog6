@@ -321,8 +321,48 @@ function cptui_register_my_cpts() {
   );
 
   register_post_type( "voice", $args );
+
+
+	/**
+	 * Post Type: コラム.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "コラム", "custom-post-type-ui" ),
+		"singular_name" => esc_html__( "コラム", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "コラム", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "column", "with_front" => true ],
+		"query_var" => true,
+		"menu_position" => 3,
+		"menu_icon" => "dashicons-admin-customizer",
+		"supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields", "revisions", "author" ],
+		"taxonomies" => [ "column_cat" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "column", $args );
 }
-	
 
 add_action( 'init', 'cptui_register_my_cpts' );
 
@@ -444,10 +484,40 @@ function cptui_register_my_taxes() {
     "show_in_quick_edit" => true,
   );
   register_taxonomy( "bnr_type", array( "event_bnr" ), $args );		
+
+	/**
+	 * Taxonomy: コラムカテゴリー.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "コラムカテゴリー", "custom-post-type-ui" ),
+		"singular_name" => esc_html__( "コラムカテゴリー", "custom-post-type-ui" ),
+	];
+
 	
+	$args = [
+		"label" => esc_html__( "コラムカテゴリー", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'column_cat', 'with_front' => true,  'hierarchical' => true, ],
+		"show_admin_column" => true,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "column_cat",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => true,
+		"sort" => true,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "column_cat", [ "column" ], $args );
 }
-
-
 
 add_action( 'init', 'cptui_register_my_taxes' );
 
@@ -643,6 +713,17 @@ add_filter('wpcf7_validate_text',  'wpcf7_validate_kana', 11, 2);  add_filter('w
   return $result;
 }
 
+
+//ショートコードでphpファイルを呼び出し
+function my_php_Include($params = array()) {
+ extract(shortcode_atts(array('file' => 'default'), $params));
+ ob_start();
+ include(STYLESHEETPATH . "/$file.php");
+ return ob_get_clean();
+}
+add_shortcode('myphp', 'my_php_Include');
+
+
 //公開期限設定
 function shortcode_timelimit($atts, $content = null) {
 extract(shortcode_atts(array(
@@ -674,3 +755,137 @@ add_action( 'admin_menu', 'add_css_metabox' );
 function add_css_metabox() {
     add_meta_box( 'custom_css', 'カスタムCSS', 'create_add_css', array('post', 'page','voice','example'));
 }
+
+/*admin-styleCSS追加*/
+function custom_editor_settings(){
+add_editor_style('admin-style.css');
+}
+add_filter( 'admin_init', 'custom_editor_settings' );
+
+
+//ADD QUICKTAG 投稿タイプ追加
+add_filter( 'addquicktag_post_types', 'my_addquicktag_post_types' );
+function my_addquicktag_post_types( $post_types ) {
+$post_types[] = 'example';
+$post_types[] = 'voice';
+$post_types[] = 'reform';
+$post_types[] = 'staff';
+$post_types[] = 'column';
+return $post_types;
+}
+
+
+// プロフィールに任意のフィールドを追加するサンプル
+function add_profile_sample_fields( $user ) {
+    ?>
+<div style="background: #fff; padding: 1em;">
+    <h2><?php _e( 'スタッフ紹介ページ表示項目（上位版）' ); ?></h2>
+
+    <table class="form-table">
+		
+		
+        <tr>
+            <th><label for="message"><?php _e( '「メッセージ」「こんな人」' ); ?></label><br><small>プロフィールページのヘッダ見出し</small></th>
+            <td>
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="<?php _e( '（例）&#13;自分自身が働く喜びを感じながら、&#13;“働く喜び”が感じられる人と家を&#13;つくりたい' ); ?>"><?php echo esc_attr( get_the_author_meta( 'message', $user->ID ) ); ?></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="skills"><?php _e( 'スキル・できること' ); ?></label><br><small>項目ごとに改行</small></th>
+            <td>
+                <textarea name="skills" id="skills" cols="30" rows="5" placeholder="<?php _e( '（例）&#13;建築設計&#13;商品開発&#13;建築コンサルティング' ); ?>"><?php echo esc_attr( get_the_author_meta( 'skills', $user->ID ) ); ?></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="credentials"><?php _e( '所有資格' ); ?></label><br><small>項目ごとに改行</small></th>
+            <td>
+                <textarea name="credentials" id="credentials" cols="30" rows="5" placeholder="<?php _e( '（例）&#13;一級建築士&#13;１級建築施工管理技士&#13;宅地建物取引士' ); ?>"><?php echo esc_attr( get_the_author_meta( 'credentials', $user->ID ) ); ?></textarea>
+            </td>
+        </tr>
+
+		
+        <tr>
+            <th><label for="text-sample"><?php _e( 'テキスト' ); ?></label></th>
+            <td>
+                <input type="text" name="text-sample" id="text-sample" value="<?php echo esc_attr( get_the_author_meta( 'text-sample', $user->ID ) ); ?>" class="regular-text" placeholder="<?php _e( 'テキストフィールドのサンプル' ); ?>" />
+            </td>
+        </tr>
+        <tr>
+            <th><label for="select-sample"><?php _e('セレクト' ); ?></label></th>
+            <td>
+                <select name="select-sample" id="select-sample">
+                    <option value="">選択</option>
+                    <option value="A" <?php selected( get_user_meta( $user->ID, 'select-sample', true ), 'A' ); ?>>A</option>
+                    <option value="B" <?php selected( get_user_meta( $user->ID, 'select-sample', true ), 'B' ); ?>>B</option>
+                    <option value="C" <?php selected( get_user_meta( $user->ID, 'select-sample', true ), 'C' ); ?>>C</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><?php _e( 'チェックボックス' ); ?></th>
+            <td>
+                <label>
+                    <input type="checkbox" name="checkbox-sample" value="1" <?php checked( get_user_meta( $user->ID, 'checkbox-sample', true ), '1' ); ?> />Yes
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <th><?php _e( 'ラジオボタン' ); ?></th>
+            <td>
+                <fieldset>
+                    <label>
+                        <input type="radio" name="radio-sample" value="A" <?php checked( get_user_meta( $user->ID, 'radio-sample', true ), 'A' ); ?> />A
+                    </label>
+                    <label>
+                        <input type="radio" name="radio-sample" value="B" <?php checked( get_user_meta( $user->ID, 'radio-sample', true ), 'B' ); ?> />B
+                    </label>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+    <?php
+}
+
+// ユーザープロフィール編集画面にフィールドを追加する
+add_action( 'show_user_profile', 'add_profile_sample_fields' );
+
+// 自分のプロフィール編集画面にフィールドを追加する
+add_action( 'edit_user_profile', 'add_profile_sample_fields' );
+
+
+// 追加した任意のフィールドを保存するサンプル
+function update_profile_sample_fields( $user_id ) {
+    // 現在のユーザーに[$user_id]を編集する権限があることを確認
+    if ( ! current_user_can( 'edit_user', $user_id ) ) {
+        return false;
+    }
+
+    // 追加した任意の各フィールドを保存用に配列化（カスタムフィールドのキー名と値）
+    $meta_keys = array(
+        'text-sample'       => $_POST['text-sample'],
+        'message'   => $_POST['message'],
+        'skills'   => $_POST['skills'],
+        'credentials'   => $_POST['credentials'],
+		
+        'select-sample'     => $_POST['select-sample'] ,
+        'checkbox-sample'   => $_POST['checkbox-sample'] ,
+        'radio-sample'      => $_POST['radio-sample']
+    );
+
+    // [$user_id]のユーザーメタを作成または更新
+    foreach( $meta_keys as $key => $value ) {
+        update_user_meta( $user_id, $key, $value );
+    }
+
+    // 1つの場合は以下の1行で完了
+    # update_user_meta( $user_id, 'text-sample', $_POST['text-sample'] );
+
+    return true;
+}
+
+// ユーザー自身のプロフィール編集画面の更新に保存アクションを追加する
+add_action( 'personal_options_update', 'update_profile_sample_fields' );
+
+// ユーザープロフィール編集画面の更新に保存アクションを追加する
+add_action( 'edit_user_profile_update', 'update_profile_sample_fields' );
+

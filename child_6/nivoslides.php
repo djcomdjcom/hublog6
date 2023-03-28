@@ -70,7 +70,7 @@ $(window).load(function() {
     )
   );
   ?>
-  <?php// the_post_thumbnail(array(1200, 630, true)); ?>
+  <?php // the_post_thumbnail(array(1200, 630, true)); ?>
   </span>
   <?php endif;?>
   <?php endforeach; ?>

@@ -41,10 +41,11 @@ $post_id = get_the_ID();
   <?php endif;  wp_reset_postdata();?>
 </nav>
 <script>
-	$(function(){
-  $('.rel_lb a[href$=".jpg"],.rel_lb a[href$=".jpeg"],.rel_lb a[href$=".JPG"],.rel_lb a[href$=".JPEG"],.rel_lb a[href$=".png"],.rel_lb a[href$=".PNG"],.rel_lb a[href$=".gif"],.rel_lb a[href$=".GIF"]').attr('rel' ,'lightbox');
+$(function(){
+$('.rel_lb a[href$=".jpg"],.rel_lb a[href$=".jpeg"],.rel_lb a[href$=".JPG"],.rel_lb a[href$=".JPEG"],.rel_lb a[href$=".png"],.rel_lb a[href$=".PNG"],.rel_lb a[href$=".webp"],.rel_lb a[href$=".WEBP"],.rel_lb a[href$=".gif"],.rel_lb a[href$=".GIF"]').attr('rel' ,'lightbox');
 });  
 </script>
+
 <?php if ( is_object_in_term($post->ID,'bunjo_role','bunjo-gallery') || is_object_in_term($post->ID,'bunjo_role','bunjo-performance') || is_object_in_term($post->ID,'bunjo_role','bunjo-equipment') || is_object_in_term($post->ID,'bunjo_role','bunjo-location') ): ?>
 <div class="text-center"> <a href="/bunjo/<?php echo $parent_id = $post->post_parent;?>.html">親ページへ移動</a> </div>
 <?php endif;?>

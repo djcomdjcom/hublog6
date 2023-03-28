@@ -1,10 +1,10 @@
 <section id="home-reason" class="pt-1 pb-5">
   <div class="wrapper container">
     <header class="content_header mb-5">
-      <h2 class="ttl center">選ばれる理由</h2>
+      <h2 class="ttl mincho center">選ばれる理由</h2>
 
     </header>
-    <ul class="row justify-content-between ">
+    <ul class="row justify-content-between px-0 ">
       <li class="col-md-3 px-2 px-sm-3 col-6"><a class="w100" href="/order"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/rsn_bnr-order@2x.webp" alt="注文住宅<?php echo get_option('profile_shop_name'); ?>の家づくり"><span><?php echo get_option('profile_shop_name');//屋号 ?>の<br>新築注文住宅</span></a></li>
       <li class="col-md-3 px-2 px-sm-3 col-6"><a class="w100" href="/renovation"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/rsn_bnr-renovation@2x.webp" alt="リノベーション、大規模改修"><span>老朽化した建物を最新の設備や<br>性能でリノベーション</span></a></li>
       <li class="col-md-3 px-2 px-sm-3 col-6"><a class="w100" href="/reformwork"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/rsn_bnr-reformwork@2x.webp" alt="リフォーム　小さな工事・修繕もお任せください"><span>小さな工事でもリーフォームは<br>当社にお任せください</span></a></li>

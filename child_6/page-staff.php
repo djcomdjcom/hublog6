@@ -1,6 +1,6 @@
 <?php
 /**
- * page-staff.php
+ * page.php
  * hublog6
  * 20230202
  */
@@ -8,7 +8,7 @@ get_header();
 ?>
 <?php the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
-  <header class="entry-header">
+  <header class="entry-header wrapper">
     <?php
     if ( has_post_thumbnail() ):
       $args = array(
@@ -24,7 +24,7 @@ get_header();
       </span></h1>
     <?php endif; ?>
   </header>
-  <div class="entry-content page-staff">
+  <div class="entry-content wrapper">
     <div class="clearfix flexbox" id="staff-inbox">
       <?php include('loop-authors.php'); ?>
       <?php //the_content(); ?>

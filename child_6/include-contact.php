@@ -1,5 +1,5 @@
 
-<div class="include-contact row maxw-1170  mx-auto px-0 py-2 my-5 bg_key02">
+<div class="include-contact row maxw-1170 mx-md-auto px-0 py-2 my-5 bg_key02 mx-fit">
   <div class="col-lg-5 text-center align-self-center">
     <p class="lead my-4 mx-auto">お気軽にどうぞご相談ください</p>
     <p class="w100 maxw-260 mx-auto"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-footer02@2x.png" width="740" height="166" alt="<?php echo get_option('profile_shop_name');//屋号 ?>会社ロゴ"/></p>
