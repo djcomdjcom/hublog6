@@ -70,10 +70,10 @@
 <!--▼▼▼インフォエリア▼▼▼-->
 <div id="home-infoarea" class="row justify-content-between wrapper container mx-auto px-0 mb-5 ">
 <script>
-$(function(){
-$('.posts .post.style-event').addClass('my-5 my-md-3 '); 
-$('.posts .post.style-event .thumbnail').addClass('py-0 '); 
-$('.posts .post.style-inc_news .thumbnail').addClass('py-0 '); 
+jQuery(function(){
+jQuery('.posts .post.style-event').addClass('my-5 my-md-3 '); 
+jQuery('.posts .post.style-event .thumbnail').addClass('py-0 '); 
+jQuery('.posts .post.style-inc_news .thumbnail').addClass('py-0 '); 
 });		
 </script>
 <section id="home-news" class="home-content  px-0 px-md-3 col-md-6 mb-5">
@@ -157,8 +157,8 @@ $('.posts .post.style-inc_news .thumbnail').addClass('py-0 ');
 
 <section id="home-blog" class="pt-5 pb-5 mb-5 mx-fit"> 
   <script>
-$(function(){
-$('#home-blog .posts .post').addClass('p-3 col-md-3 col-sm-6 col-12'); 
+jQuery(function(){
+jQuery('#home-blog .posts .post').addClass('p-3 col-md-3 col-sm-6 col-12'); 
 });		
 </script>
   <div class="wrapper container ">

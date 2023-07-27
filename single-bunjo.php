@@ -40,11 +40,7 @@ $post_id = get_the_ID();
   </ul>
   <?php endif;  wp_reset_postdata();?>
 </nav>
-<script>
-$(function(){
-$('.rel_lb a[href$=".jpg"],.rel_lb a[href$=".jpeg"],.rel_lb a[href$=".JPG"],.rel_lb a[href$=".JPEG"],.rel_lb a[href$=".png"],.rel_lb a[href$=".PNG"],.rel_lb a[href$=".webp"],.rel_lb a[href$=".WEBP"],.rel_lb a[href$=".gif"],.rel_lb a[href$=".GIF"]').attr('rel' ,'lightbox');
-});  
-</script>
+
 
 <?php if ( is_object_in_term($post->ID,'bunjo_role','bunjo-gallery') || is_object_in_term($post->ID,'bunjo_role','bunjo-performance') || is_object_in_term($post->ID,'bunjo_role','bunjo-equipment') || is_object_in_term($post->ID,'bunjo_role','bunjo-location') ): ?>
 <div class="text-center"> <a href="/bunjo/<?php echo $parent_id = $post->post_parent;?>.html">親ページへ移動</a> </div>
@@ -151,11 +147,11 @@ foreach ( $posts as $post ): setup_postdata( $post );
 </ul>
 <?php endif ;//?>
 <script>
-$(function() {
-  $(".tab a").click(function() {
-    $(this).parent().addClass("active").siblings(".active").removeClass("active");
-    var tabContents = $(this).attr("href");
-    $(tabContents).addClass("active").siblings(".active").removeClass("active");
+jQuery(function() {
+  jQuery(".tab a").click(function() {
+    jQuery(this).parent().addClass("active").siblings(".active").removeClass("active");
+    var tabContents = jQuery(this).attr("href");
+    jQuery(tabContents).addClass("active").siblings(".active").removeClass("active");
     return false;
   });
 });	
@@ -167,17 +163,17 @@ $(function() {
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script> 
   <script>
 //タグにclass追加
-$(function(){
-$('#galleryslider .gallery-size-large').addClass('slider_thumb slider'); 
+jQuery(function(){
+jQuery('#galleryslider .gallery-size-large').addClass('slider_thumb slider'); 
 });
-$(function(){
-$('#galleryslider .gallery-size-thumbnail').addClass('thumb'); 
+jQuery(function(){
+jQuery('#galleryslider .gallery-size-thumbnail').addClass('thumb'); 
 });
 		
 		
 //slick設定
-$(document).on('ready', function() {
-  $('.slider_thumb').slick({
+jQuery(document).ready(function () {
+	jQuery('.slider_thumb').slick({
 //      arrows:true,
 //	  dots: false,
       asNavFor:'.thumb',
@@ -188,37 +184,37 @@ $(document).on('ready', function() {
 		
 //サムネイル表示の調整	
 	
-var windowWidth = $(window).width();
+var windowWidth = jQuery(window).width();
 var windowSm = 768;
 if (windowWidth <= windowSm) {
-$(function () {
+jQuery(function () {
 let slidesToShowNum = 6; //slidesToShowに設定したい値を挿入
  /* slidesToShowより投稿が少ない場合の処理▽ */
-let item = $('#galleryslider .thumb dl').length; //dlの個数を取得
+let item = jQuery('#galleryslider .thumb dl').length; //dlの個数を取得
 if (item <= slidesToShowNum) {
 for ( i = 0 ; i <= slidesToShowNum + 1 - item ; i++) { //足りていない要素数分、後ろに複製
-$('#galleryslider .thumbl dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .thumb');
+jQuery('#galleryslider .thumbl dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .thumb');
   }
  } /* slidesToShowより投稿が少ない場合の処理△ */
 
- $('#galleryslider .thumb').slick({
+ jQuery('#galleryslider .thumb').slick({
   slidesToShow: slidesToShowNum, //slidesToShowNumに設定した値が入る
  });
 });
 	
 } else {
 //横幅768px以上（PC、タブレット）に適用させるJavaScriptを記述
-$(function () {
+jQuery(function () {
 let slidesToShowNum = 12; //slidesToShowに設定したい値を挿入
  /* slidesToShowより投稿が少ない場合の処理▽ */
-let item = $('#galleryslider .thumb dl').length; //liの個数を取得
+let item = jQuery('#galleryslider .thumb dl').length; //liの個数を取得
 if (item <= slidesToShowNum) {
 for ( i = 0 ; i <= slidesToShowNum + 1 - item ; i++) { //足りていない要素数分、後ろに複製
-$('#galleryslider .thumb dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .thumb');
+jQuery('#galleryslider .thumb dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .thumb');
   }
  }
  /* slidesToShowより投稿が少ない場合の処理△ */
- $('#galleryslider .thumb').slick({
+ jQuery('#galleryslider .thumb').slick({
   slidesToShow: slidesToShowNum, //slidesToShowNumに設定した値が入る
  });
 });}			
@@ -295,10 +291,10 @@ query_posts( array(
 <script>
 	
 	
-$(function() {
+jQuery(function() {
 //var set = 300;//ウインドウ上部からどれぐらいの位置で変化させるか
 	// ナビゲーションのリンクを指定
-   var navLink = $('#bunjo_content-nav li a'); 
+   var navLink = jQuery('#bunjo_content-nav li a'); 
     // 各コンテンツのページ上部からの開始位置と終了位置を配列に格納しておく
    var contentsArr = new Array();
   for (var i = 0; i < navLink.length; i++) {
@@ -307,9 +303,9 @@ $(function() {
       // ページ内リンクでないナビゲーションが含まれている場合は除外する
       if(targetContents.charAt(0) == '#') {
          // ページ上部からコンテンツの開始位置までの距離を取得
-            var targetContentsTop = $(targetContents).offset().top;
+            var targetContentsTop = jQuery(targetContents).offset().top;
          // ページ上部からコンテンツの終了位置までの距離を取得
-            var targetContentsBottom = targetContentsTop + $(targetContents).outerHeight(true) - 1;
+            var targetContentsBottom = targetContentsTop + jQuery(targetContents).outerHeight(true) - 1;
          // 配列に格納
             contentsArr[i] = [targetContentsTop, targetContentsBottom]
       }
@@ -318,7 +314,7 @@ $(function() {
   // 現在地をチェックする
    function currentCheck() {
        // 現在のスクロール位置を取得
-        var windowScrolltop = $(window).scrollTop();
+        var windowScrolltop = jQuery(window).scrollTop();
         for (var i = 0; i < contentsArr.length; i++) {
            // 現在のスクロール位置が、配列に格納した開始位置と終了位置の間にあるものを調べる
           if(contentsArr[i][0] <= windowScrolltop && contentsArr[i][1] >= windowScrolltop) {
@@ -331,14 +327,14 @@ $(function() {
   }
  
    // ページ読み込み時とスクロール時に、現在地をチェックする
-  $(window).on('load scroll', function() {
+  jQuery(window).on('load scroll', function() {
       currentCheck();
  });
  
  // ナビゲーションをクリックした時のスムーズスクロール
     navLink.click(function() {
-      $('html,body').animate({
-          scrollTop: $($(this).attr('href')).offset().top
+      jQuery('html,body').animate({
+          scrollTop: jQuery(jQuery(this).attr('href')).offset().top
        }, 300);
         return false;
    })

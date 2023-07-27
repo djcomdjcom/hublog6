@@ -8,7 +8,7 @@
  */
 ?>			
 
-			<article id="post-<?php the_ID(); ?>" class="post clearfix category-sell poststyle-bukken">
+			<article class="post-<?php the_ID(); ?> post clearfix category-sell poststyle-bukken">
 				<?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 				<span class="tmb-icon new">新着</span>
 				<?php endif; ?>

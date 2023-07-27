@@ -6,7 +6,7 @@ looppart-inc_news.php
 ?>
 
 
-<article id="post-<?php the_ID(); ?>"  class="post style-inc_news row justify-content-around p-2 py-md-3 mt-3 mb-4 mb-md-0 linkarea">
+<article  class="post-<?php the_ID(); ?> post style-inc_news row justify-content-around p-2 py-md-3 mt-3 mb-4 mb-md-0 linkarea">
 	
   <figure href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>" class="col-4 thumbnail mb-0"> <span class="attachment my-0">
   <?php

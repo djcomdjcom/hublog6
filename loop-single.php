@@ -37,14 +37,10 @@ $post_id_example = ( post_custom( 'voice-inc_example' ) );
 $post_id_voice = ( post_custom( 'example-inc_voice' ) );
 
 ?>
-<script>
-$(function(){
-$('.rel_lb a[href$=".jpg"],.rel_lb a[href$=".jpeg"],.rel_lb a[href$=".JPG"],.rel_lb a[href$=".JPEG"],.rel_lb a[href$=".png"],.rel_lb a[href$=".PNG"],.rel_lb a[href$=".webp"],.rel_lb a[href$=".WEBP"],.rel_lb a[href$=".gif"],.rel_lb a[href$=".GIF"]').attr('rel' ,'lightbox');
-});  
-</script>
+
 
 <?php the_post(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('hentry rel_lb'); ?>>
   <header class="wrapper mx-fit">
     <?php if (post_custom('voice-catch')) : ?>
     <h1 class="entry-title"><span><?php echo (post_custom('voice-catch')) ; ?></span></h1>

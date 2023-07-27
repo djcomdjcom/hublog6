@@ -41,18 +41,18 @@ endif;
 </header>
 <?php endif; //!is_home ?>
 <script>
-$(function(){
-$('.posts .post.style-example').addClass('col-6 col-lg-4'); 
+jQuery(function(){
+jQuery('.posts .post.style-example').addClass('col-6 col-lg-4'); 
 });
-$(function(){
-$('.posts .post.style-voice').addClass('col-6 col-lg-4'); 
+jQuery(function(){
+jQuery('.posts .post.style-voice').addClass('col-6 col-lg-4'); 
 });
-$(function(){
-$('.posts .post.style-event').addClass('mx-auto'); 
+jQuery(function(){
+jQuery('.posts .post.style-event').addClass('mx-auto'); 
 });
-$(function(){
-$('.posts .post.style-event').addClass('mb-5'); 
-$('.posts .post.style-event .thumbnail').addClass('pr-md-5'); 
+jQuery(function(){
+jQuery('.posts .post.style-event').addClass('mb-5'); 
+jQuery('.posts .post.style-event .thumbnail').addClass('pr-md-5'); 
 });
 </script>
 

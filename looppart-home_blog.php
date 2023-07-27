@@ -1,10 +1,10 @@
 <?php
 /**
  * looppart.php
- * @テーマ名	hublog4
+ * @テーマ名	hublog6
  */
 ?>
-<article id="post-<?php the_ID(); ?>"  class="post style-home_blog linkarea">
+<article class="post-<?php the_ID(); ?> post style-home_blog linkarea">
   <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
   <span class="tmb-icon new">新着</span>
   <?php endif; ?>

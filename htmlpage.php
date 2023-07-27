@@ -8,11 +8,6 @@ template name: 2カラム（旧デフォレイアウト）
  */
 get_header();
 ?>
-<script>
-$(function(){
-$('.rel_lb a[href$=".jpg"],.rel_lb a[href$=".jpeg"],.rel_lb a[href$=".JPG"],.rel_lb a[href$=".JPEG"],.rel_lb a[href$=".png"],.rel_lb a[href$=".PNG"],.rel_lb a[href$=".webp"],.rel_lb a[href$=".WEBP"],.rel_lb a[href$=".gif"],.rel_lb a[href$=".GIF"]').attr('rel' ,'lightbox');
-});  
-</script>
 <?php the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
   <header class="wrapper">

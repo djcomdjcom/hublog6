@@ -3,7 +3,7 @@
  * looppart-headline.php
  */
 ?>
-<article id="post-<?php the_ID(); ?>" class="post clearfix style-headline">
+<article class="post-<?php the_ID(); ?> post clearfix style-headline">
   <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 	<span class="tmb-icon new">新着</span>
 	<?php endif; ?>

@@ -17,7 +17,7 @@
 
 					<!--home-event-->
 					<script type="text/javascript">
-					$(function() {
+					jQuery(function($){
 					    $('.inc-eventposts').slick({
 					          infinite: true,
 					          dots:true,

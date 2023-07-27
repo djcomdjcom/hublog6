@@ -2,12 +2,13 @@
 /**
  * addcontent-reform.php
  *
- * @テーマ名	hublog-c
- * @更新日付	2012.02.15
+ * @更新日付	2023.04.15
  *
  */
 ?>
 <div id="addcontent-reform" class="clearfix">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <?php if (post_custom('reform-gallery')) : ?>
   <section id="galleryslider" class="clearfix rel_lb">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.css" media="screen" />
@@ -15,16 +16,17 @@
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script> 
     <script>
 //タグにclass追加
-$(function(){
-$('#galleryslider .gallery-size-large').addClass('slider_thumb slider'); 
+jQuery(function(){
+jQuery('#galleryslider .gallery-size-large').addClass('slider_thumb slider'); 
 });
-$(function(){
-$('#galleryslider .gallery-size-thumbnail').addClass('thumb'); 
+jQuery(function(){
+jQuery('#galleryslider .gallery-size-thumbnail').addClass('thumb'); 
 });
 		
 //slick設定
-$(document).on('ready', function() {
-  $('.slider_thumb').slick({
+		
+jQuery(document).ready(function () {
+  jQuery('.slider_thumb').slick({
       arrows:true,
 	  dots: true,
       asNavFor:'.thumb',
@@ -35,37 +37,37 @@ $(document).on('ready', function() {
 		
 //サムネイル表示の調整	
 	
-var windowWidth = $(window).width();
+var windowWidth = jQuery(window).width();
 var windowSm = 768;
 if (windowWidth <= windowSm) {
-$(function () {
+jQuery(function () {
 let slidesToShowNum = 6; //slidesToShowに設定したい値を挿入
  /* slidesToShowより投稿が少ない場合の処理▽ */
-let item = $('#galleryslider .gallery-size-thumbnail dl').length; //dlの個数を取得
+let item = jQuery('#galleryslider .gallery-size-thumbnail dl').length; //dlの個数を取得
 if (item <= slidesToShowNum) {
 for ( i = 0 ; i <= slidesToShowNum + 1 - item ; i++) { //足りていない要素数分、後ろに複製
-$('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .gallery-size-thumbnail');
+jQuery('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .gallery-size-thumbnail');
   }
  } /* slidesToShowより投稿が少ない場合の処理△ */
 
- $('#galleryslider .gallery-size-thumbnail').slick({
+ jQuery('#galleryslider .gallery-size-thumbnail').slick({
   slidesToShow: slidesToShowNum, //slidesToShowNumに設定した値が入る
  });
 });
 	
 } else {
 //横幅768px以上（PC、タブレット）に適用させるJavaScriptを記述
-$(function () {
+jQuery(function () {
 let slidesToShowNum = 12; //slidesToShowに設定したい値を挿入
  /* slidesToShowより投稿が少ない場合の処理▽ */
-let item = $('#galleryslider .gallery-size-thumbnail dl').length; //liの個数を取得
+let item = jQuery('#galleryslider .gallery-size-thumbnail dl').length; //liの個数を取得
 if (item <= slidesToShowNum) {
 for ( i = 0 ; i <= slidesToShowNum + 1 - item ; i++) { //足りていない要素数分、後ろに複製
-$('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .gallery-size-thumbnail');
+jQuery('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appendTo('#galleryslider .gallery-size-thumbnail');
   }
  }
  /* slidesToShowより投稿が少ない場合の処理△ */
- $('#galleryslider .gallery-size-thumbnail').slick({
+ jQuery('#galleryslider .gallery-size-thumbnail').slick({
   slidesToShow: slidesToShowNum, //slidesToShowNumに設定した値が入る
  });
 });}	
@@ -116,20 +118,20 @@ $('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appe
     </div>
     <!--inbox-->
     
-      <?php if (post_custom('reform-youbou')) : ?>
+    <?php if (post_custom('reform-youbou')) : ?>
     <dl class="reform-youbou">
       <dt class="title">お客様のご要望・お悩み</dt>
       <dd class="postcustom"> <?php echo wpautop(post_custom('reform-youbou')); ?> </dd>
     </dl>
-      <?php endif ?>
+    <?php endif ?>
     <!--reform-youbou-->
     
-      <?php if (post_custom('reform-kaiketsusaku')) : ?>
+    <?php if (post_custom('reform-kaiketsusaku')) : ?>
     <dl class="reform-kaiketsusaku">
       <dt class="title"><?php echo get_option('profile_shop_name'); ?>からの解決策</dt>
       <dd><?php echo wpautop(post_custom('reform-kaiketsusaku')); ?> </dd>
     </dl>
-      <?php endif ?>
+    <?php endif ?>
   </div>
   <!--reform-meta--> 
   
@@ -138,29 +140,26 @@ $('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appe
 
 <!--　beforeafter表示-->
 <div id="before-after" class="rel_lb py-5">
-	
-<?php $customfield = SCF::get('ba'); ?>
-<?php if(!empty($customfield)): ?>
-	
+  <?php $customfield = SCF::get('ba'); ?>
+  <?php if(!empty($customfield)): ?>
   <?php
   $ba = SCF::get( 'ba' );
   foreach ( $ba as $fields ): ?>
   <?php
   if ( $fields[ 'ba_before' ] !== ""
-    and $fields[ 'add_contents' ] !== "" ): __COMPILER_HALT_OFFSET__ :?>
+    and $fields[ 'add_contents' ] !== "" ): __COMPILER_HALT_OFFSET__: ?>
   <?php
   $ba_before = $fields[ 'ba_before' ];
   $ba_after = $fields[ 'ba_after' ];
   ?>
   <div class="row container mx-auto p-0 ba-item py-3 mb-5 border-bottom">
     <div class="col-12 p-0">
-		
-<?php   if ( $fields['ba_title']):?>		
+      <?php   if ( $fields['ba_title']):?>
       <h3 class="noicon ttl"><?php echo  $fields['ba_title']; ?></h3>
-<?php endif;?>
-<?php   if ( $fields['ba_description']):?>		
+      <?php endif;?>
+      <?php   if ( $fields['ba_description']):?>
       <div class="description pb-4" id="description_01"> <?php echo nl2br( $fields['ba_description']); ?> </div>
-<?php endif;?>
+      <?php endif;?>
     </div>
     <div class="col-4 px-0 before-image">
       <figure class="w100"> <span class="ttl">施工前</span> <a href="<?php echo wp_get_attachment_url($ba_before,'large'); ?>"><img src="<?php echo wp_get_attachment_url($ba_before,'thumbnail'); ?>"></a> </figure>
@@ -172,7 +171,6 @@ $('#galleryslider .gallery-size-thumbnail dl:nth-child(' + i + ')').clone().appe
   </div>
   <?php endif;?>
   <?php endforeach;?>
-<?php endif; ?> 
-	
+  <?php endif; ?>
 </div>
 <!--beforeafterここまで-->

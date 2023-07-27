@@ -5,7 +5,7 @@
  * 20230202
  */
 ?>
-<article id="post-<?php the_ID(); ?>"  class="post row linkarea py-3 mb-sm-4 mb-lg-5">
+<article class="post-<?php the_ID(); ?> post row linkarea py-3 mb-sm-4 mb-lg-5">
   <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
   <span class="tmb-icon new">新着</span>
   <?php endif; ?>

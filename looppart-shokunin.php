@@ -9,7 +9,7 @@
 ?>			
 
 
-<div id="post-<?php the_ID(); ?>"  class="post clearfix style-shokunin flex50">
+<div  class="post-<?php the_ID(); ?> post clearfix style-shokunin flex50">
 	<div class="thumbnail">
 		<?php	$thumbnail = get_the_post_thumbnail(get_the_ID(), 'thumbnail');
 						if ( empty($thumbnail) ) :

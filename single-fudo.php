@@ -7,11 +7,7 @@
 
 get_header();
 ?>
-<script>
-$(function(){
-  $('.shadow a[href$=".jpg"],.shadow a[href$=".jpeg"],.shadow a[href$=".JPG"],.shadow a[href$=".JPEG"],.shadow a[href$=".png"],.shadow a[href$=".PNG"],.shadow a[href$=".gif"],.shadow a[href$=".GIF"]').attr({ rel: "lightbox" });
-});
-</script>
+
 <?php the_post(); ?>
 <header id="fudo_header" class="clearfix">
   <div class="r-box">
@@ -184,13 +180,13 @@ $(function(){
 <script>  
   
   // JS
-$(function() {
-	$('.reach').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+jQuery(function() {
+	jQuery('.reach').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
 		if(isInView){
-			$(this).stop().addClass('on');
+			jQuery(this).stop().addClass('on');
 		}
 		else{
-			$(this).stop().removeClass('on');
+			jQuery(this).stop().removeClass('on');
 		}
 	});
 });

@@ -7,8 +7,8 @@
  */
 ?>
 <script type="text/javascript">
-$(window).load(function() {
-    $('#slideshow').nivoSlider({
+jQuery(window).load(function() {
+    jQuery('#slideshow').nivoSlider({
         effect: 'sliceDown,sliceDownLeft,sliceUp,boxRandom,boxRain,boxRainReverse', // 画像切り替え時のアニメーション
 		slices: 15, // For slice animations
         boxCols: 8, // For box animations
@@ -108,8 +108,8 @@ z-index: -10;
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/nivo/nivo-slider.css" media="screen" />
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/nivo/jquery.nivo.slider.pack.js"></script> 
 <script type="text/javascript">
-    $(window).load(function() {
-		$('#slideshow').fadeIn(800); //★ここに追記（JavaScript）
-        $('#slideshow').nivoSlider();
+    jQuery(window).load(function() {
+		jQuery('#slideshow').fadeIn(800); //★ここに追記（JavaScript）
+        jQuery('#slideshow').nivoSlider();
     });
 </script> 

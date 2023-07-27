@@ -8,7 +8,7 @@
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="clearfix style-example post">
+<article class="post-<?php the_ID(); ?> clearfix style-example post">
 <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 <span class="tmb-icon new">新着</span>
 <?php endif; ?>

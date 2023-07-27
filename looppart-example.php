@@ -2,13 +2,12 @@
 /**
 * looppart-example.php
 *
-* @テーマ名	hublog
-* @更新日付	2012.04.06
+* @テーマ名	hublog6
 *
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="style-example post  p-2 p-sm-3 pb-md-3 linkarea">
+<article class="post-<?php the_ID(); ?> style-example post  p-2 p-sm-3 pb-md-3 linkarea">
 	<?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 	<span class="tmb-icon new">新着</span>
 	<?php endif; ?>

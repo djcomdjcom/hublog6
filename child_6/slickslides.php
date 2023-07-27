@@ -13,8 +13,8 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script>
 
 <script style="display: none">
-$(function() {
-    $('.center-item').slick({
+jQuery(function() {
+    jQuery('.center-item').slick({
           infinite: true,
           dots:true,
           slidesToShow: 1,

@@ -3,7 +3,7 @@
  * looppart-thumb_title.php
  */
 ?>
-<article id="post-<?php the_ID(); ?>" class="post clearfix style-thumb_title">
+<article class="post-<?php the_ID(); ?> post clearfix style-thumb_title">
 <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
 <span class="tmb-icon new">新着</span>
 <?php endif; ?>

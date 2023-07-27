@@ -6,7 +6,7 @@
     </header>
 
     <script>
-$(function(){
+jQuery(function($){
 $('.posts .post.style-example').addClass('col-6 col-lg-4 ');
 });
 </script>
@@ -23,7 +23,7 @@ $('.posts .post.style-example').addClass('col-6 col-lg-4 ');
     $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ):
       ?>
-    <div class="posts row justify-content-start">
+    <div class="posts row justify-content-start pb-4">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
       <?php get_template_part('looppart', 'example'); ?>
       <?php endwhile; ?>

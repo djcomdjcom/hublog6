@@ -22,8 +22,8 @@ $clm_looppart = post_custom('clm-looppart') ;
 	  
 	  
 <script>
-$(function(){
-$('#clm_posts .posts .post').addClass('<?php echo post_custom('clm-looppart_css') ;?>');
+jQuery(function(){
+jQuery('#clm_posts .posts .post').addClass('<?php echo post_custom('clm-looppart_css') ;?>');
 });
 </script>
 	  

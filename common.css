@@ -4,16 +4,21 @@
  * hublog6
  * 20230202
  */
+
+@import url("css/bootstrap.min.css");
 html {
   scroll-behavior: smooth;
 }
+
 main#main{
 	min-height: 60vh;
-	padding: 0 15px;
+	padding: 0 1rem;
 	overflow: hidden;
 }
-
-@media screen and (max-width: 575.98px) {
+html a{
+	color:#454545;
+}
+@media screen and (max-width: 1199.98px) {
 .mx-fit,
 .mx-fit.wrapper{
 	margin-left: -1rem !important;
@@ -38,7 +43,7 @@ main#main{
 }
 .outerwrap:before{
 	content: '';
-	background: #ddd;
+	background: #f6f7fb;
 	position: absolute;
 	left: -15px;
 	right: -15px;
@@ -414,8 +419,19 @@ ul.sub-menu {
   z-index: 101;
 }
 #headnav .sub-menu {
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.70);
+	backdrop-filter:blur( 5px );
+    -webkit-backdrop-filter: blur(5px);
 }
+#headnav .home-menu li li a{
+	padding: 1em 1.5em;
+	height: auto;
+	background:rgba(255,255,255,0.00);
+}
+#headnav .home-menu li li a:hover{
+	background:rgba(255,255,255,1.00);
+}
+
 #headnav .home-menu .sub-menu {
   border: 2px solid #fff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.20);
@@ -567,6 +583,7 @@ ul.sub-menu {
   top: 40%;
   width: 100%;
 }
+
 .flexslider .flex-direction-nav li {}
 .flexslider .flex-direction-nav li a {
   position: absolute;
@@ -631,7 +648,7 @@ ul.sub-menu {
   position: relative;
   overflow: hidden;
   width: 100%; /*　トリミングしたい枠の幅　*/
-  padding-top: 75%; /*　トリミングしたい枠の高さ　*/
+  padding-top: 81%; /*　トリミングしたい枠の高さ　*/
 }
 .posts .post .attachment img {
   position: absolute;
@@ -756,6 +773,45 @@ ul.sub-menu {
   transition: .2s;
   color: #fff;
 }
+.btnshine{
+    /*キラッと光る基点とするためrelativeを指定*/
+  position: relative;
+    /*ボタンの形状*/  
+  display:inline-block;
+    background: rgba(0,0,0,0.00);
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+}
+.btnshine:hover{
+    background: rgba(0,0,0,1);
+}
+/*キラッと光る*/
+.btnshine::before {
+  content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
+  position: absolute;
+  top: 0;
+  left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.45) 100%);
+  transform: skewX(-25deg);
+}
+
+/*hoverした際の移動のアニメーション*/
+.btnshine:hover::before {
+  animation: shine 0.7s;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
 .post .postmetadata {
   clear: both;
   text-align: right;
@@ -995,6 +1051,26 @@ img {
 /*CONTENT*/
 /* Entry Single Page　記事　ページ本文
 *****************************************************************************/
+
+main h1{
+font-size: clamp(1.25rem, 0.795rem + 2.27vw, 2.5rem);
+line-height: 1.333;
+}
+main h2{
+font-size: clamp(1.25rem, 1.114rem + 0.68vw, 1.625rem);
+line-height: 1.333;
+}
+
+main h3{
+font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+height: 1;
+}
+main h4,
+main h5,
+main h6{
+font-size:clamp(1rem, 0.955rem + 0.23vw, 1.1rem);
+line-height: 1.5;
+}
 .r-box {
   float: right;
   display: block;
@@ -1126,7 +1202,7 @@ img {
 }
 .entry-content ul {
   list-style: disc outside none;
-  margin: 0 0 1em 2.5em;
+/*  margin: 0 0 1em 2.5em;*/
 }
 .entry-content ul ul {
   list-style: square outside none;
@@ -1136,7 +1212,7 @@ img {
 }
 .entry-content ol {
   list-style: decimal outside;
-  margin: 0 0 1em 2.5em;
+/*  margin: 0 0 1em 2.5em;*/
 }
 .entry-content ol ol li {
   list-style: lower-roman;
@@ -1158,7 +1234,7 @@ img {
 ul.check, ul.check li, ul.asterisk, ul.asterisk li {
   list-style: none !important;
 }
-ul.check li, ul.asterisk li {
+ul.check li {
   font-size: 1.1em;
 }
 ul.check li {
@@ -1173,15 +1249,27 @@ ul.check li:before {
   display: inline-block;
   margin-right: 0.3em;
 }
+.entry-content ul.asterisk,
+ul.asterisk{
+	font-size: 1rem;
+	padding-left: 2rem;
+}
+
 ul.asterisk li:before {
   content: "※";
   list-style: none !important;
   display: inline-block;
-  margin-right: 0.5em;
+	font-size: 1em;
+	margin-right: 0.3em;
 }
+.entry-content ul.asterisk li,
 ul.asterisk li {
-  font-size: 1em;
+	font-size: 1em;
+font-size: 1rem;text-indent: -0.7em;
+	
 }
+
+
 ol.numbering {
   padding-left: 2em;
 }
@@ -1373,12 +1461,12 @@ dl.flow dd:last-child:after {
     text-shadow: 0 0 3px #333;
   }
 }
-.anchor {
-  padding-top: 30px;
-  margin-top: -30px;
-}
-.entry-content .anchor {
-  margin-bottom: 2em;
+.anchor:before {
+	content: " ";
+	margin-top: -5rem;
+	height: 5rem;
+	display: block;
+	visibility: hidden;
 }
 .txt-l {
   font-size: 1.1em;
@@ -1614,8 +1702,8 @@ dl.flow dd:last-child:after {
 .bg-wh10 {
   background: rgba(255, 255, 255, 0.10);
 }
-.flexbox li,
-.row li{
+.flexbox > li,
+.row > li{
 	list-style: none;
 	display: block;
 }
@@ -2539,7 +2627,7 @@ padding: 0.7em;
   position: relative;
   overflow: hidden;
   width: 100%; /*　トリミングしたい枠の幅　*/
-  padding-top: 100%; /*　トリミングしたい枠の高さ　*/
+  padding-top: 65%; /*　トリミングしたい枠の高さ　*/
 }
 .posts .post.style-inc_blog .attachment img {
   position: absolute;
@@ -2662,7 +2750,7 @@ padding: 0.7em;
   display: block;
 }
 .posts .post.post.style-event a.event-closed {
-  background: rgba(0, 0, 0, 0.25);
+background: rgba(255,255,255,0.70);
   display: inline-block;
   position: absolute;
   left: 0;
@@ -2670,7 +2758,7 @@ padding: 0.7em;
   top: 0;
   bottom: 0;
   z-index: 100;
-  color: #fff;
+  color: #222;
   text-align: center;
   vertical-align: middle;
 }
@@ -2679,8 +2767,12 @@ padding: 0.7em;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
-  width: 100%;
+  display: inline-block;
+background: #fff;
+  width: 80%;
+  max-width: 18em;
+  padding: 0.75em 1.5em;
+  border: 1px solid #ccc;
 }
 .posts .post.style-event {
   position: relative;
@@ -2696,6 +2788,8 @@ padding: 0.7em;
 .posts .post.style-event .metabox .todetail a {
   background: #fff;
   border-radius: 1rem;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 .posts .post.style-event .event-status {
   pointer-events: none;
@@ -2713,64 +2807,44 @@ padding: 0.7em;
   top: -5%;
   max-width: 18%;
 }
-
-.posts .post.style-event:before{
-	content: "";
-	display: block;
-	background: #fff;
-	box-shadow: 0 0 5px rgba(0,0,0,0.2);
-	position: absolute;		
-	left: 0.5rem;
-	right: 0.5rem;
-	bottom: 0.5rem;
-	top: 0.5rem;
+.posts .post.style-event:before {
+  content: "";
+  display: block;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  top: 0.5rem;
 }
-.posts .post.style-event .metabox {
-}
-.posts .post.post.style-event a.event-closed{
-	left: 0.5rem;
-	right: 0.5rem;
-	bottom: 0.5rem;
-	top: 0.5rem;
-	text-shadow: 0 0 0.5em #000;
+.posts .post.style-event .metabox {}
+.posts .post.post.style-event a.event-closed {
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  top: 0.5rem;
+  text-shadow: 0 0 0.5em #fff;
 }
 .posts .post.style-event .event-status {
-  left: -0.4% ;
-  top: -1% ;
+  left: -0.4%;
+  top: -1%;
   width: 100%;
-	max-width: 140px;
-	min-width: 100px;
-	z-index: 101;
+  max-width: 140px;
+  min-width: 100px;
+  z-index: 101;
 }
-/*
-@media screen and (min-width:576px) {
-  #home-event .posts .event-status {
-    left: -2.4%;
-    top: -8%;
-    max-width: 30%;
-  }
-}
-@media screen and (max-width:575.98px) {
-  .posts .post.style-event .event-status {
-    left: -4%;
-    top: -4%;
-    max-width: 60%;
-  }
-}
-.posts .post.style-event.closed .event-status {
-  display: none;
-}
-*/
+
 .event_type_icon {
-  background-color: #3498db;
+  background-color: #209aa0;
   position: relative;
   display: inline-block;
   height: 2em;
-  line-height: 2;
+  line-height: 2em;
   padding: 0 1em;
   border-radius: 0 3px 3px 0;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 15px;
   font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
@@ -2780,7 +2854,7 @@ padding: 0.7em;
   text-align: center;
 }
 .event_type_icon:before {
-  background: #3498db;
+  background: #209aa0;
   content: '';
   position: absolute;
   top: calc(50% - 0.7em);
@@ -2950,7 +3024,7 @@ table.gaiyou tr.profile_shop_name {
 
 @media screen and (max-width:767.98px) {
 #wrapper #access {
-padding-bottom: 20em;
+padding-bottom: 1rem;
 overflow:visible;
 }
 }
@@ -3038,6 +3112,7 @@ overflow:visible;
 }
 .btn-gnavi-menu {
   font-size: 9px;
+
   padding-top: 25px;
   color: #666;
 }
@@ -3260,6 +3335,7 @@ br.sponly {}
     font-size: 14pt;
   }
   .txt12 {
+
     font-size: 12pt;
   }
   .txt10 {
