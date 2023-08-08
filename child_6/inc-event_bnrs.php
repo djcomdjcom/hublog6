@@ -35,9 +35,8 @@ jQuery(function($){
 							autoplayHoverPause: true,
 							autoplayTimeout: 3000,
 							autoplaySpeed:  800,
-							margin: 1,
+							margin: -1,
 							stagePadding: 0,
-							margin:10,
 							freeDrag: false,
 							mouseDrag: false,
 							touchDrag: true,
@@ -74,7 +73,7 @@ jQuery(function($){
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <div id="post-<?php the_ID(); ?>" class="clearfix post style-bnrs item">
       <?php if (post_custom('event_bnr_url')) :?>
-      <a target="<?php if (post_custom('event_bnr_target')) :?>_blank<?php endif;?>" class=" w100" href="<?php echo(post_custom('event_bnr_url')) ;?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s'),the_title_attribute('echo=0')); ?>">
+      <a target="<?php if (post_custom('event_bnr_target')) :?>_blank<?php endif;?>" class="btnshine w100" href="<?php echo(post_custom('event_bnr_url')) ;?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s'),the_title_attribute('echo=0')); ?>">
       <?php
       if ( function_exists( 'the_post_image' ) ) {
         if ( the_post_image( array( 300, 100 ) ) === false ) {

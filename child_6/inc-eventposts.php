@@ -17,8 +17,8 @@
 
 					<!--home-event-->
 					<script type="text/javascript">
-					jQuery(function($){
-					    $('.inc-eventposts').slick({
+					jquery(function() {
+					    jquery('.inc-eventposts').slick({
 					          infinite: true,
 					          dots:true,
 					          slidesToShow: 3,

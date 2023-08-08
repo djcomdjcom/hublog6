@@ -3,7 +3,24 @@
  * hublog-lt/functions.php
  */
 
-/*---- Google Web Fonts ----*/
+
+
+
+
+
+// 子テーマのfunctions.php
+
+//class Child_Theme_Settings extends Theme_Settings {
+  // ここに子テーマで追加・変更したい関数やプロパティを記述します
+
+  // 例：
+  // function custom_setup_theme_supports() {
+  //   // 子テーマ独自のテーマサポート設定を追加
+  //   add_theme_support( 'custom-feature' );
+  // }
+//}
+
+//$child_hublog6 = new Child_Theme_Settings();
 
 
 function customize_menus(){
@@ -12,6 +29,9 @@ $menu[19] = $menu[10];  //メディアの移動
 unset($menu[10]);
 }
 add_action( 'admin_menu', 'customize_menus' );
+
+
+
 
 //webフォント
 /*
@@ -888,4 +908,3 @@ add_action( 'personal_options_update', 'update_profile_sample_fields' );
 
 // ユーザープロフィール編集画面の更新に保存アクションを追加する
 add_action( 'edit_user_profile_update', 'update_profile_sample_fields' );
-

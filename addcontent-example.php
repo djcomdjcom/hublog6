@@ -1,28 +1,31 @@
 <?php if ( post_custom( 'remove-gallery' ) == 'gallery_off' ):  ?>
 <?php else:?>
 
-
-<div id="galleryslider" class="sliderArea rel_lb">
+<div id="galleryslider" class="mx-fit sliderArea rel_lb">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.css" media="screen">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick-theme.css" media="screen">
-  <script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script>
-	
-<script>
+  <script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script> 
+  <script>
 jQuery(function($){
 $('#galleryslider .gallery-size-large').addClass('slider_thumb slider'); 
 $('#galleryslider .gallery-size-thumbnail').addClass('thumb'); 
 
-jQuery(document).ready(function () {
+$(document).ready(function () {
 
-
-jQuery('.slider_thumb').slick({
+$('.slider_thumb').slick({
 arrows:true,
 dots:false,
 asNavFor:'.thumb',
+	
+	
+      centerMode: true,
+      centerPadding: '0',
+      slidesToShow: 1, // 画面に表示するスライドの数
+	focusOnSelect: true,
 });
-
-
-jQuery('.thumb').slick({
+	
+	
+$('.thumb').slick({
 slidesToScroll: 1,
 asNavFor: '.slider_thumb',
 focusOnSelect: true,
@@ -45,7 +48,19 @@ responsive: [
 });
 });
 
+	  
+	  
 </script>
+	
+	
+<style>
+  .slick-slide {
+    margin: 0 10px; /* スライド間の間隔を調整 */
+  }
+  .centerpadding {
+    padding: 0 25%; /* 中央に余白を持たせるパーセンテージを調整 */
+  }
+</style>	
   <?php
   $id = $post->ID;
   if ( empty( $exclude ) ) {
@@ -64,7 +79,7 @@ responsive: [
   <?php echo (do_shortcode('[gallery columns="0" link="file" title="true" caption="true" description="true" size="large"  exclude='.$exclude.']')); ?> <?php echo (do_shortcode('[gallery columns="0" link="none" title="false" caption="false" description="false" size="thumbnail"  exclude='.$exclude.']')); ?> </div>
 <!--example-slider-->
 
-<article id="example-header" class="rel_lb">
+<article id="example-header" class=" rel_lb">
   <?php if(post_custom('catchcopy')) :?>
   <h2 class="title"> <span class="catchcopy"> <?php echo nl2br ( post_custom('catchcopy') ); ?> </span> </h2>
   <?php endif ;?>

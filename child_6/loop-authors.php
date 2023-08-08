@@ -15,7 +15,7 @@ $authers = array(
 
 
 foreach ($authers as $auther){
-$user_info = get_userdatabylogin( $auther );
+$user_info = get_user_by('login', $auther );
 $userphotoid = $user_info->ID;
 /*
 以下のURLを参考に、必要な値を表示させる

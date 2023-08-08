@@ -934,8 +934,9 @@ body.page-concept #custom_headerimg {
 	display:block;
 }
 #breadcrumb {
-  font-size: 0.8rem;
-  color: #777;
+font-size: 0.8rem;
+color: #777;
+padding: 1rem;
 }
 #breadcrumb h1, #breadcrumb h1.entry-title {
   display: inline-block;
@@ -961,8 +962,6 @@ body.page-concept #custom_headerimg {
   font-size: 1.4em;
   color: #000;
   padding: 1em;
-  border-bottom: 2px solid #333;
-  border-top: 1px dotted #ccc;
   margin-top: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -1908,7 +1907,7 @@ margin: 0;
   overflow: hidden;
 }
 #galleryslider .gallery dl {
-  margin: 0 0.5vw;
+  margin: 0;
   padding: 0;
   position: relative;
 }
@@ -1940,7 +1939,6 @@ margin: 0;
   max-height: 100%;
   max-width: 1024px;
   position: absolute;
-  /*object-fit: cover;*/
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(100%);
@@ -2395,7 +2393,7 @@ padding: 10px 10px 5px;
 
 .hublog-inquiry .beforeform{
 	text-align: center;
-	margin-bottom: 2em;
+	padding: 1.5rem 0;
 }
 .hublog-inquiry .beforeform .ttl{
 	border: 1px solid #ddd;
@@ -2412,8 +2410,15 @@ textarea.wpcf7-textarea {
   max-width: 100%;
   width: auto;
 }
+
+@media screen and (min-width: 992px) {
+
 .wpcf7-form {
 border-radius: 0.5em;
+	}
+}
+
+.wpcf7-form {
 background: #f9f9f9;
 padding: 2em;
 box-sizing: border-box;
@@ -2422,7 +2427,7 @@ box-sizing: border-box;
 .wpcf7-form > .privacy{
 border: 1px solid #ddd;
 background: #f4f4f4;
-padding: 1em;
+padding: 1em 3%;
 display: block;
 margin-bottom: 0.5em;
 }
@@ -2791,22 +2796,18 @@ background: #fff;
   padding-left: 2em;
   padding-right: 2em;
 }
-.posts .post.style-event .event-status {
-  pointer-events: none;
-}
 .posts .post.style-event .thumbnail {
   margin-bottom: 0;
 }
 .posts .post.style-event .tmb-icon.new {
   display: none;
 }
+#addcontent-event .eyecatch .event-status,
 .posts .post.style-event .event-status {
   position: absolute;
   width: 100%;
-  left: -1.5%;
-  top: -5%;
-  max-width: 18%;
 }
+#addcontent-event:before,
 .posts .post.style-event:before {
   content: "";
   display: block;
@@ -2818,6 +2819,8 @@ background: #fff;
   bottom: 0.5rem;
   top: 0.5rem;
 }
+
+
 .posts .post.style-event .metabox {}
 .posts .post.post.style-event a.event-closed {
   left: 0.5rem;
@@ -2826,15 +2829,6 @@ background: #fff;
   top: 0.5rem;
   text-shadow: 0 0 0.5em #fff;
 }
-.posts .post.style-event .event-status {
-  left: -0.4%;
-  top: -1%;
-  width: 100%;
-  max-width: 140px;
-  min-width: 100px;
-  z-index: 101;
-}
-
 .event_type_icon {
   background-color: #209aa0;
   position: relative;
@@ -2844,7 +2838,7 @@ background: #fff;
   padding: 0 1em;
   border-radius: 0 3px 3px 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 0.85rem;
   font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
@@ -2877,6 +2871,55 @@ background: #fff;
   background-color: #fff;
   border-radius: 100%;
 }
+
+#addcontent-event{}
+#addcontent-event {
+	position: relative;
+}
+
+
+#addcontent-event .event-status,
+.posts .post.style-event .event-status {
+max-width: 180px;
+min-width: 100px;
+position: absolute;
+width: 100%;
+z-index: 101;
+pointer-events: none;
+}
+#home-event .posts .post.style-event .event-status {
+max-width: 140px;
+}
+
+.posts .post.style-event .event-status {
+left: -0.4%;
+top: -1%;
+}
+
+#addcontent-event .eyecatch .event-status{
+left: -2rem;
+top: -2rem;
+}
+.posts .post.style-event .moreinfo{
+	background: #f6f7fb;
+	display: block;
+	position: absolute;
+	bottom: 1.0rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	text-align: center;
+	font-size: 1rem;
+	line-height: 2;
+}
+.posts .post.style-event .moreinfo:before{
+    content: "\e5cc";
+    font-family: 'Material Icons';
+    display: inline-block;
+	vertical-align: middle;
+    margin-right: 0.5em;
+  }
+
+
 /*Voice
 *******************************************************************************/
 /*single*/

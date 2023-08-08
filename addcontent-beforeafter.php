@@ -8,7 +8,6 @@
 ?>
 <div id="addcontent-reform" class="clearfix">
 	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <?php if (post_custom('reform-gallery')) : ?>
   <section id="galleryslider" class="clearfix rel_lb">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.css" media="screen" />

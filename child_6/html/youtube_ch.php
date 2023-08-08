@@ -46,7 +46,7 @@
 
 <div id="cta" class="pb-5"></div>
 <script>
-jQuery(function($){
+$(function(){
 	$('iframe[src*="youtube"]').wrap('<div class="mx-auto maxw-600"><div class="movie-wrap"></div></div>');
 });
 </script>

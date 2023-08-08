@@ -38,7 +38,7 @@
 
 
 <script>
-jQuery(function($){
+$(function(){
 $('.concept-nav .menu-concept-nav-container > ul').addClass('row justify-content-between maxw-1100  mx-auto'); 
 $('.concept-nav .menu-concept-nav-container > ul > li').addClass('col-6 col-md-3 d-block mb-4'); 
 });		

@@ -1,7 +1,7 @@
 <div class='yarpp yarpp-huglog'> 
 	
       <script>
-jQuery(function($){
+$(function(){
 $('.posts .post.style-example').addClass('col-12 col-sm-6 col-md-3');
 });
 </script>
